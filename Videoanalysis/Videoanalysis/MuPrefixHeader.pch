@@ -1,0 +1,189 @@
+//
+//  MuPrefixHeader.pch
+//  ShopshopHosts
+//
+//  Created by 刘坤 on 2017/12/26.
+//  Copyright © 2017年 刘坤. All rights reserved.
+//
+
+#ifndef MuPrefixHeader_pch
+#define MuPrefixHeader_pch
+
+// Include any system framework and library headers here that should be included in all compilation units.
+// You will also need to set the Prefix Header build setting of one or more of your targets to reference this file.
+
+#endif /* MuPrefixHeader_pch */
+
+#pragma mark --Tool.h
+
+#import "JKCategories.h"
+#import "HostBaseViewController.h"
+#import "HostMuTabbarController.h"
+#import "HostBaseNavigationController.h"
+#import "HostBaseWebViewController.h"
+#import <QMUIKit.h>
+#pragma mark 国际化操作
+#define NGLocalizedString(str) NSLocalizedString(str, @"")
+
+#define MuColor(r, g, b ,alp) [UIColor colorWithRed:(r)/255.0 green:(g)/255.0 blue:(b)/255.0 alpha:alp]
+
+// 表格背景颜色
+#define MainTableBGColor [UIColor colorWithHexString:@"F5F6F8"]
+// 分割线颜色
+#define MainLineColor [UIColor colorWithHexString:@"D2D5DB"]
+// 未选中文字颜色
+#define MainTextUnselColor [UIColor colorWithHexString:@"666666"]
+#define MainBlack [UIColor colorWithHexString:@"000000"]
+#define MainWhite [UIColor colorWithHexString:@"ffffff"]
+#define MainNavTitle [UIColor colorWithHexString:@"161A1A"]
+#define MainTfFontColor [UIColor colorWithHexString:@"B0B8BF"]
+#define MainGray [UIColor colorWithHexString:@"595959"]
+#define MainGolden [UIColor colorWithHexString:@"57818b"]
+#define MainAppColor [UIColor colorWithHexString:@"57818B"]
+#define MainBackGroundColor [UIColor colorWithHexString:@"F5F6F8"]
+
+#define MainBtnDisSelectedColor [UIColor colorWithHexString:@"D2D5DB"]
+#define MainArm  (double)arc4random()/0x100000000
+
+#define MainRectangleImage [UIImage imageNamed:@"Rectangle"]
+
+//#595959   灰      #000000
+//************************  bounds宽高 *************************************************
+#define MuscreenScale [UIScreen mainScreen].scale
+#define MuScreen_Width  [UIScreen mainScreen].bounds.size.width
+#define MuScreen_Height   [UIScreen mainScreen].bounds.size.height
+#define MuView_WIDTH self.view.bounds.size.width
+#define MuView_HEIGHT self.view.bounds.size.height
+#define SCREEN_W [UIScreen mainScreen].bounds.size.width
+#define SCREEN_H [UIScreen mainScreen].bounds.size.height
+#define imgNormal @"photo_check_default"
+#define imgSelect @"photo_check_selected"
+#define kSizeThumbnailCollectionView  (MuScreen_Width-10)/4
+
+#define MuRealValue(value) ((value)/375.0f*[UIScreen mainScreen].bounds.size.width)
+#define MuHRValue(value) ((value)/                                                                          736.0f*[UIScreen mainScreen].bounds.size.height)
+#define IOS11 @available(iOS 11.0, *)
+#define SafeAreaTopHeight (MuScreen_Height >= 812.0 ? 88 : 64)//导航高度？
+#define TopHeight (MuScreen_Height > 812.0 ? 140 : 112)//导航高度？
+#define Camera (MuScreen_Height > 812.0 ? 64 : 20)//导航高度？
+#define StatusBarHeight (MuScreen_Height >= 812.0 ? 44 : 20)//导航高度？
+#define SafeAreaBottomHeight (MuScreen_Height >= 812.0 ? 34 : 0)//底部
+#define MuDevice_Is_iPhoneX ([UIScreen instancesRespondToSelector:@selector(currentMode)] ? CGSizeEqualToSize(CGSizeMake(1125, 2436), [[UIScreen mainScreen] currentMode].size) : NO)
+#define    MuStatusBar_Height  MuDevice_Is_iPhoneX?44:20//运营状态栏
+#define isIphoneX ((double)MuScreen_Height >= 812.0 ? 1 : 0)
+
+
+//************************  获取图片资源*************************************************
+#define MuGetImage(imageName) [UIImage imageNamed:[NSString stringWithFormat:imageName]]
+//************************ 设置 view 圆角和边框*******************************************
+/*
+ 设置 view 圆角和边框
+ */
+#define ViewBorderRadius(View, Radius, Width, Color,Bounds)\
+\
+[View.layer setCornerRadius:(Radius)];\
+[View.layer setMasksToBounds:(Bounds)];\
+[View.layer setBorderWidth:(Width)];\
+[View.layer setBorderColor:[Color CGColor]]
+
+//************************  系统版本*************************************************
+//iOS版本
+#define ISIOS7_OR_LATER     ([[[UIDevice currentDevice] systemVersion] floatValue] >= 6.99)
+#define IS_OS_8_OR_LATER    ([[[UIDevice currentDevice] systemVersion] floatValue] >= 8.0)
+//获取系统版本
+#define IOS_SYSTEM_VERSION [[[UIDevice currentDevice] systemVersion] floatValue]
+
+
+#define WeakObj(o) autoreleasepool{} __weak typeof(o) o##Weak = o;  //宏定义self
+#define MuUserDefaults [NSUserDefaults standardUserDefaults]
+
+//************************  日志log*************************************************
+
+//#if DEBUG
+//#define NSLog(FORMAT, ...){\
+//NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];\
+//[dateFormatter setDateStyle:NSDateFormatterMediumStyle];\
+//[dateFormatter setTimeStyle:NSDateFormatterShortStyle];\
+//[dateFormatter setDateFormat:@"YYYY/MM/dd HH:mm:ss:SSSSSS"];\
+//NSString *str = [dateFormatter stringFromDate:[NSDate date]];\
+//fprintf(stderr,"[--%s--]*[--%s--]*[--%s:%d--]\n",[str UTF8String], [[NSString stringWithFormat:FORMAT, ##__VA_ARGS__] UTF8String],[[[NSString stringWithUTF8String:__FILE__] lastPathComponent] UTF8String], __LINE__);\
+//}\f
+//#else
+//#define NSLog(FORMAT, ...) nil
+//#endif
+
+#define IsNullObject(obj) (obj == nil || obj == Nil || obj == NULL || [obj isKindOfClass:[NSNull class]] || ![obj isKindOfClass:[NSObject class]])
+
+#define IsNullString(str) (IsNullObject(str) || ![str isKindOfClass:[NSString class]] || [str length] == 0)
+
+
+//当前版本
+#define RCDLive_IOS_FSystenVersion ([[[UIDevice currentDevice] systemVersion] floatValue])
+
+#if USE_BUNDLE_RESOUCE
+#define RCDLive_IMAGE_BY_NAMED(value) [RCDLiveKitUtility imageNamed:(value)ofBundle:@"RongCloud.bundle"]
+#else
+#define RCDLive_IMAGE_BY_NAMED(value) [UIImage imageNamed:NSLocalizedString((value), nil)]
+#endif // USE_BUNDLE_RESOUCE
+
+#if __IPHONE_OS_VERSION_MIN_REQUIRED >= 70000
+#define RCDLive_RC_MULTILINE_TEXTSIZE(text, font, maxSize, mode) [text length] > 0 ? [text \
+boundingRectWithSize:maxSize options:(NSStringDrawingTruncatesLastVisibleLine | NSStringDrawingUsesLineFragmentOrigin | NSStringDrawingUsesFontLeading) \
+attributes:@{NSFontAttributeName:font} context:nil].size : CGSizeZero;
+#else
+#define RCDLive_RC_MULTILINE_TEXTSIZE(text, font, maxSize, mode) [text length] > 0 ? [text \
+sizeWithFont:font constrainedToSize:maxSize lineBreakMode:mode] : CGSizeZero;
+#endif
+
+// 大于等于IOS7
+#define RCDLive_RC_MULTILINE_TEXTSIZE_GEIOS7(text, font, maxSize) [text length] > 0 ? [text \
+boundingRectWithSize:maxSize options:(NSStringDrawingTruncatesLastVisibleLine | NSStringDrawingUsesLineFragmentOrigin | NSStringDrawingUsesFontLeading) \
+attributes:@{NSFontAttributeName:font} context:nil].size : CGSizeZero;
+
+// 小于IOS7
+#define RCDLive_RC_MULTILINE_TEXTSIZE_LIOS7(text, font, maxSize, mode) [text length] > 0 ? [text \
+sizeWithFont:font constrainedToSize:maxSize lineBreakMode:mode] : CGSizeZero;
+
+#ifdef DEBUG
+#define RCDLive_DebugLog( s, ... ) NSLog( @"[%@:(%d)] %@", [[NSString stringWithUTF8String:__FILE__] lastPathComponent], __LINE__, [NSString stringWithFormat:(s), ##__VA_ARGS__] )
+#else
+#define RCDLive_DebugLog( s, ... )
+#endif
+
+//  弱引用宏
+#define WeakSelf(VC) __weak VC* weakSelf = self
+#ifndef weakify
+#if DEBUG
+#if __has_feature(objc_arc)
+#define weakify(object) autoreleasepool{} __weak __typeof__(object) weak##_##object = object;
+#else
+#define weakify(object) autoreleasepool{} __block __typeof__(object) block##_##object = object;
+#endif
+#else
+#if __has_feature(objc_arc)
+#define weakify(object) try{} @finally{} {} __weak __typeof__(object) weak##_##object = object;
+#else
+#define weakify(object) try{} @finally{} {} __block __typeof__(object) block##_##object = object;
+#endif
+#endif
+#endif
+
+#ifndef strongify
+#if DEBUG
+#if __has_feature(objc_arc)
+#define strongify(object) autoreleasepool{} __typeof__(object) object = weak##_##object;
+#else
+#define strongify(object) autoreleasepool{} __typeof__(object) object = block##_##object;
+#endif
+#else
+#if __has_feature(objc_arc)
+#define strongify(object) try{} @finally{} __typeof__(object) object = weak##_##object;
+#else
+#define strongify(object) try{} @finally{} __typeof__(object) object = block##_##object;
+#endif
+#endif
+#endif
+
+#define NSLog(...) printf("%f %s\n",[[NSDate date]timeIntervalSince1970],[[NSString stringWithFormat:__VA_ARGS__]UTF8String]);
+
+
