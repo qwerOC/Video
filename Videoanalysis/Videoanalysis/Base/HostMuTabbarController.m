@@ -58,14 +58,14 @@
     
     HostVideoVC *HomeVC = [[HostVideoVC alloc] init];
     [self setUpOneChildVcWithVc:HomeVC
-                          Image:@"unselected1"
-                  selectedImage:@"selected1"
-                          title:NSLocalizedString(@"MuTabbarPublish", @"")];
+                          Image:@"shuqian"
+                  selectedImage:@"shuqian"
+                          title:@""];
     HostMineVC *cooperVC = [[HostMineVC alloc] init];
     [self setUpOneChildVcWithVc:cooperVC
-                          Image:@"unselected2"
-                  selectedImage:@"selected2"
-                          title:NSLocalizedString(@"MuTabbarStore", @"")];
+                          Image:@"mine"
+                  selectedImage:@"mine"
+                          title:@""];
     
 }
 #pragma mark - 初始化设置tabBar上面单个按钮的方法
@@ -85,13 +85,16 @@
                         title:(NSString *)title
 {
     HostBaseNavigationController *nav = [[HostBaseNavigationController alloc] initWithRootViewController:Vc];
-    UIImage *colorImage = [UIImage jk_imageWithColor:[UIColor whiteColor]];
-    [[UINavigationBar appearance] setShadowImage:colorImage];
+    
+//    UIImage *colorImage = [UIImage jk_imageWithColor:[UIColor whiteColor]];
+//    [[UINavigationBar appearance] setShadowImage:colorImage];
     UIImage *myImage = [UIImage imageNamed:image];
-    //myImage = [myImage imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
+    myImage = [myImage imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
+    UIImage *mySelectedImage = [UIImage imageNamed:selectedImage];
+       mySelectedImage = [mySelectedImage imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
     //tabBarItem，是系统提供模型，专门负责tabbar上按钮的文字以及图片展示
     Vc.tabBarItem.image = myImage;
-    Vc.tabBarItem.title=title;
+//    Vc.tabBarItem.title=title;
     //    选中颜色
     NSDictionary *selected = [NSDictionary dictionaryWithObject:[UIColor lightGrayColor]
                                                          forKey:NSForegroundColorAttributeName];
@@ -100,13 +103,12 @@
     NSDictionary *unSelected = [NSDictionary dictionaryWithObject:[UIColor blackColor]
                                                            forKey:NSForegroundColorAttributeName];
     [Vc.tabBarItem setTitleTextAttributes:unSelected forState:UIControlStateNormal];
-    UIImage *mySelectedImage = [UIImage imageNamed:selectedImage];
-    mySelectedImage = [mySelectedImage imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
+   
     Vc.tabBarItem.selectedImage = mySelectedImage;
-    if (@available(iOS 11.0, *)) {
-        nav.navigationItem.largeTitleDisplayMode = UINavigationItemLargeTitleDisplayModeNever;
-    } else {
-    }
+//    if (@available(iOS 11.0, *)) {
+//        nav.navigationItem.largeTitleDisplayMode = UINavigationItemLargeTitleDisplayModeNever;
+//    } else {
+//    }
     [self addChildViewController:nav];
 }
 /// 点击tabbar 震动反馈

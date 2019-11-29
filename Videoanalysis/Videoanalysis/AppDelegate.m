@@ -17,8 +17,8 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
-    HostMuTabbarController *tabbar=[[HostMuTabbarController  alloc] init];
-    self.window.rootViewController=tabbar;
+    _tabbarVC=[[HostMuTabbarController  alloc] init];
+    self.window.rootViewController=_tabbarVC;
     [self.window makeKeyAndVisible];
     
     return YES;

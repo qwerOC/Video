@@ -124,7 +124,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 /**
  添加检测用户是否已经认证通过
-
+                                                            
  @return yes：通过   no：不通过
  */
 - (BOOL)checkUserAuth;

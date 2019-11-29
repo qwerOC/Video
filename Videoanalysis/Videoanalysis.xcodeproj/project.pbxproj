@@ -15,14 +15,14 @@
 		7651A934238BA00800574813 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7651A933238BA00800574813 /* Assets.xcassets */; };
 		7651A937238BA00800574813 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7651A935238BA00800574813 /* LaunchScreen.storyboard */; };
 		7651A93A238BA00800574813 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 7651A939238BA00800574813 /* main.m */; };
-		7651A951238BA0A500574813 /* HostBaseWebViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7651A945238BA0A500574813 /* HostBaseWebViewController.xib */; };
-		7651A952238BA0A500574813 /* HostUINavigationController+FDFullscreenPopGesture.m in Sources */ = {isa = PBXBuildFile; fileRef = 7651A947238BA0A500574813 /* HostUINavigationController+FDFullscreenPopGesture.m */; };
-		7651A954238BA0A500574813 /* HostMuTabbarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7651A94C238BA0A500574813 /* HostMuTabbarController.m */; };
-		7651A956238BA0A500574813 /* HostBaseWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7651A94E238BA0A500574813 /* HostBaseWebViewController.m */; };
-		7651A957238BA0A500574813 /* HostBaseNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7651A94F238BA0A500574813 /* HostBaseNavigationController.m */; };
-		7651A961238BA58200574813 /* HostBaseViewController.h in Sources */ = {isa = PBXBuildFile; fileRef = 7651A94B238BA0A500574813 /* HostBaseViewController.h */; };
 		7651A965238BA7B700574813 /* HostVideoVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 7651A964238BA7B700574813 /* HostVideoVC.m */; };
 		7651A968238BA7C600574813 /* HostMineVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 7651A967238BA7C600574813 /* HostMineVC.m */; };
+		76DE278C2390ED4900C5671D /* HostBaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 76DE27802390ED4900C5671D /* HostBaseViewController.m */; };
+		76DE278D2390ED4900C5671D /* HostBaseWebViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 76DE27832390ED4900C5671D /* HostBaseWebViewController.xib */; };
+		76DE278E2390ED4900C5671D /* HostUINavigationController+FDFullscreenPopGesture.m in Sources */ = {isa = PBXBuildFile; fileRef = 76DE27852390ED4900C5671D /* HostUINavigationController+FDFullscreenPopGesture.m */; };
+		76DE278F2390ED4900C5671D /* HostMuTabbarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 76DE27892390ED4900C5671D /* HostMuTabbarController.m */; };
+		76DE27902390ED4900C5671D /* HostBaseWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 76DE278A2390ED4900C5671D /* HostBaseWebViewController.m */; };
+		76DE27912390ED4900C5671D /* HostBaseNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 76DE278B2390ED4900C5671D /* HostBaseNavigationController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,22 +40,22 @@
 		7651A936238BA00800574813 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		7651A938238BA00800574813 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7651A939238BA00800574813 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		7651A941238BA0A500574813 /* HostBaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HostBaseViewController.m; sourceTree = "<group>"; };
-		7651A942238BA0A500574813 /* HostBaseWebViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HostBaseWebViewController.h; sourceTree = "<group>"; };
-		7651A944238BA0A500574813 /* HostMuTabbarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HostMuTabbarController.h; sourceTree = "<group>"; };
-		7651A945238BA0A500574813 /* HostBaseWebViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HostBaseWebViewController.xib; sourceTree = "<group>"; };
-		7651A947238BA0A500574813 /* HostUINavigationController+FDFullscreenPopGesture.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "HostUINavigationController+FDFullscreenPopGesture.m"; sourceTree = "<group>"; };
-		7651A948238BA0A500574813 /* HostUINavigationController+FDFullscreenPopGesture.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "HostUINavigationController+FDFullscreenPopGesture.h"; sourceTree = "<group>"; };
-		7651A949238BA0A500574813 /* HostBaseNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HostBaseNavigationController.h; sourceTree = "<group>"; };
-		7651A94B238BA0A500574813 /* HostBaseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HostBaseViewController.h; sourceTree = "<group>"; };
-		7651A94C238BA0A500574813 /* HostMuTabbarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HostMuTabbarController.m; sourceTree = "<group>"; };
-		7651A94E238BA0A500574813 /* HostBaseWebViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HostBaseWebViewController.m; sourceTree = "<group>"; };
-		7651A94F238BA0A500574813 /* HostBaseNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HostBaseNavigationController.m; sourceTree = "<group>"; };
 		7651A962238BA66900574813 /* MuPrefixHeader.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MuPrefixHeader.pch; sourceTree = "<group>"; };
 		7651A963238BA7B700574813 /* HostVideoVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HostVideoVC.h; sourceTree = "<group>"; };
 		7651A964238BA7B700574813 /* HostVideoVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HostVideoVC.m; sourceTree = "<group>"; };
 		7651A966238BA7C600574813 /* HostMineVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HostMineVC.h; sourceTree = "<group>"; };
 		7651A967238BA7C600574813 /* HostMineVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HostMineVC.m; sourceTree = "<group>"; };
+		76DE27802390ED4900C5671D /* HostBaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HostBaseViewController.m; sourceTree = "<group>"; };
+		76DE27812390ED4900C5671D /* HostBaseWebViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HostBaseWebViewController.h; sourceTree = "<group>"; };
+		76DE27822390ED4900C5671D /* HostMuTabbarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HostMuTabbarController.h; sourceTree = "<group>"; };
+		76DE27832390ED4900C5671D /* HostBaseWebViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HostBaseWebViewController.xib; sourceTree = "<group>"; };
+		76DE27852390ED4900C5671D /* HostUINavigationController+FDFullscreenPopGesture.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "HostUINavigationController+FDFullscreenPopGesture.m"; sourceTree = "<group>"; };
+		76DE27862390ED4900C5671D /* HostUINavigationController+FDFullscreenPopGesture.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "HostUINavigationController+FDFullscreenPopGesture.h"; sourceTree = "<group>"; };
+		76DE27872390ED4900C5671D /* HostBaseNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HostBaseNavigationController.h; sourceTree = "<group>"; };
+		76DE27882390ED4900C5671D /* HostBaseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HostBaseViewController.h; sourceTree = "<group>"; };
+		76DE27892390ED4900C5671D /* HostMuTabbarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HostMuTabbarController.m; sourceTree = "<group>"; };
+		76DE278A2390ED4900C5671D /* HostBaseWebViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HostBaseWebViewController.m; sourceTree = "<group>"; };
+		76DE278B2390ED4900C5671D /* HostBaseNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HostBaseNavigationController.m; sourceTree = "<group>"; };
 		FFE52FF4F935BCBD93577F2B /* Pods-Videoanalysis.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Videoanalysis.debug.xcconfig"; path = "Target Support Files/Pods-Videoanalysis/Pods-Videoanalysis.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -97,6 +97,7 @@
 				29E2B933EC17BEFE2A733DB7 /* Frameworks */,
 			);
 			sourceTree = "<group>";
+			wrapsLines = 0;
 		};
 		7651A925238BA00500574813 /* Products */ = {
 			isa = PBXGroup;
@@ -111,47 +112,21 @@
 			children = (
 				7651A927238BA00500574813 /* AppDelegate.h */,
 				7651A928238BA00500574813 /* AppDelegate.m */,
-				7651A92A238BA00500574813 /* SceneDelegate.h */,
-				7651A92B238BA00500574813 /* SceneDelegate.m */,
-				7651A969238BA8EE00574813 /* Tool */,
-				7651A958238BA0AF00574813 /* Main */,
-				7651A940238BA0A500574813 /* Base */,
 				7651A92D238BA00500574813 /* ViewController.h */,
 				7651A92E238BA00500574813 /* ViewController.m */,
-				7651A962238BA66900574813 /* MuPrefixHeader.pch */,
-				7651A930238BA00500574813 /* Main.storyboard */,
+				7651A969238BA8EE00574813 /* Tool */,
+				7651A958238BA0AF00574813 /* Main */,
+				76DE277F2390ED4900C5671D /* Base */,
 				7651A933238BA00800574813 /* Assets.xcassets */,
-				7651A935238BA00800574813 /* LaunchScreen.storyboard */,
 				7651A938238BA00800574813 /* Info.plist */,
+				7651A935238BA00800574813 /* LaunchScreen.storyboard */,
 				7651A939238BA00800574813 /* main.m */,
+				7651A930238BA00500574813 /* Main.storyboard */,
+				7651A962238BA66900574813 /* MuPrefixHeader.pch */,
+				7651A92A238BA00500574813 /* SceneDelegate.h */,
+				7651A92B238BA00500574813 /* SceneDelegate.m */,
 			);
 			path = Videoanalysis;
-			sourceTree = "<group>";
-		};
-		7651A940238BA0A500574813 /* Base */ = {
-			isa = PBXGroup;
-			children = (
-				7651A946238BA0A500574813 /* FDFullscreenPopGesture */,
-				7651A949238BA0A500574813 /* HostBaseNavigationController.h */,
-				7651A94F238BA0A500574813 /* HostBaseNavigationController.m */,
-				7651A94B238BA0A500574813 /* HostBaseViewController.h */,
-				7651A941238BA0A500574813 /* HostBaseViewController.m */,
-				7651A942238BA0A500574813 /* HostBaseWebViewController.h */,
-				7651A94E238BA0A500574813 /* HostBaseWebViewController.m */,
-				7651A945238BA0A500574813 /* HostBaseWebViewController.xib */,
-				7651A944238BA0A500574813 /* HostMuTabbarController.h */,
-				7651A94C238BA0A500574813 /* HostMuTabbarController.m */,
-			);
-			path = Base;
-			sourceTree = "<group>";
-		};
-		7651A946238BA0A500574813 /* FDFullscreenPopGesture */ = {
-			isa = PBXGroup;
-			children = (
-				7651A947238BA0A500574813 /* HostUINavigationController+FDFullscreenPopGesture.m */,
-				7651A948238BA0A500574813 /* HostUINavigationController+FDFullscreenPopGesture.h */,
-			);
-			path = FDFullscreenPopGesture;
 			sourceTree = "<group>";
 		};
 		7651A958238BA0AF00574813 /* Main */ = {
@@ -186,6 +161,32 @@
 			children = (
 			);
 			path = Tool;
+			sourceTree = "<group>";
+		};
+		76DE277F2390ED4900C5671D /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				76DE27842390ED4900C5671D /* FDFullscreenPopGesture */,
+				76DE27872390ED4900C5671D /* HostBaseNavigationController.h */,
+				76DE278B2390ED4900C5671D /* HostBaseNavigationController.m */,
+				76DE27882390ED4900C5671D /* HostBaseViewController.h */,
+				76DE27802390ED4900C5671D /* HostBaseViewController.m */,
+				76DE27812390ED4900C5671D /* HostBaseWebViewController.h */,
+				76DE278A2390ED4900C5671D /* HostBaseWebViewController.m */,
+				76DE27832390ED4900C5671D /* HostBaseWebViewController.xib */,
+				76DE27822390ED4900C5671D /* HostMuTabbarController.h */,
+				76DE27892390ED4900C5671D /* HostMuTabbarController.m */,
+			);
+			path = Base;
+			sourceTree = "<group>";
+		};
+		76DE27842390ED4900C5671D /* FDFullscreenPopGesture */ = {
+			isa = PBXGroup;
+			children = (
+				76DE27852390ED4900C5671D /* HostUINavigationController+FDFullscreenPopGesture.m */,
+				76DE27862390ED4900C5671D /* HostUINavigationController+FDFullscreenPopGesture.h */,
+			);
+			path = FDFullscreenPopGesture;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -247,7 +248,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7651A951238BA0A500574813 /* HostBaseWebViewController.xib in Resources */,
+				76DE278D2390ED4900C5671D /* HostBaseWebViewController.xib in Resources */,
 				7651A937238BA00800574813 /* LaunchScreen.storyboard in Resources */,
 				7651A934238BA00800574813 /* Assets.xcassets in Resources */,
 				7651A932238BA00500574813 /* Main.storyboard in Resources */,
@@ -303,17 +304,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7651A961238BA58200574813 /* HostBaseViewController.h in Sources */,
-				7651A952238BA0A500574813 /* HostUINavigationController+FDFullscreenPopGesture.m in Sources */,
+				76DE27902390ED4900C5671D /* HostBaseWebViewController.m in Sources */,
+				76DE278C2390ED4900C5671D /* HostBaseViewController.m in Sources */,
 				7651A968238BA7C600574813 /* HostMineVC.m in Sources */,
 				7651A92F238BA00500574813 /* ViewController.m in Sources */,
+				76DE27912390ED4900C5671D /* HostBaseNavigationController.m in Sources */,
 				7651A929238BA00500574813 /* AppDelegate.m in Sources */,
+				76DE278E2390ED4900C5671D /* HostUINavigationController+FDFullscreenPopGesture.m in Sources */,
 				7651A93A238BA00800574813 /* main.m in Sources */,
-				7651A957238BA0A500574813 /* HostBaseNavigationController.m in Sources */,
 				7651A92C238BA00500574813 /* SceneDelegate.m in Sources */,
-				7651A954238BA0A500574813 /* HostMuTabbarController.m in Sources */,
 				7651A965238BA7B700574813 /* HostVideoVC.m in Sources */,
-				7651A956238BA0A500574813 /* HostBaseWebViewController.m in Sources */,
+				76DE278F2390ED4900C5671D /* HostMuTabbarController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -389,7 +390,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -441,7 +442,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -454,8 +455,10 @@
 			baseConfigurationReference = FFE52FF4F935BCBD93577F2B /* Pods-Videoanalysis.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 4E7GHM6C9T;
+				ENABLE_BITCODE = NO;
 				GCC_PREFIX_HEADER = ../Videoanalysis/Videoanalysis/MuPrefixHeader.pch;
 				INFOPLIST_FILE = Videoanalysis/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
@@ -463,10 +466,13 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				OTHER_LDFLAGS = "";
+				ONLY_ACTIVE_ARCH = YES;
+				OTHER_LDFLAGS = "$(inherited)";
 				PRODUCT_BUNDLE_IDENTIFIER = com.demo1.Videoanalysis;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				TARGETED_DEVICE_FAMILY = 1;
+				VALID_ARCHS = "armv7 arm64";
 			};
 			name = Debug;
 		};
@@ -475,8 +481,10 @@
 			baseConfigurationReference = 606BD8CC968C7261F2CCEB20 /* Pods-Videoanalysis.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 4E7GHM6C9T;
+				ENABLE_BITCODE = NO;
 				GCC_PREFIX_HEADER = ../Videoanalysis/Videoanalysis/MuPrefixHeader.pch;
 				INFOPLIST_FILE = Videoanalysis/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
@@ -484,10 +492,13 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				OTHER_LDFLAGS = "";
+				ONLY_ACTIVE_ARCH = YES;
+				OTHER_LDFLAGS = "$(inherited)";
 				PRODUCT_BUNDLE_IDENTIFIER = com.demo1.Videoanalysis;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				TARGETED_DEVICE_FAMILY = 1;
+				VALID_ARCHS = "armv7 arm64";
 			};
 			name = Release;
 		};
