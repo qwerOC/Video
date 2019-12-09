@@ -1,4 +1,5 @@
 PODS:
+  - HWPanModal (0.6.2)
   - JKCategories (1.8.2):
     - JKCategories/CoreData (= 1.8.2)
     - JKCategories/CoreLocation (= 1.8.2)
@@ -438,20 +439,36 @@ PODS:
     - QMUIKit/QMUILog
   - QMUIKit/QMUIResources (4.0.2)
   - QMUIKit/QMUIWeakObjectContainer (4.0.2)
+  - Yoga (1.7.0)
 
 DEPENDENCIES:
+  - HWPanModal (~> 0.6.0)
   - JKCategories (~> 1.8.2)
   - QMUIKit
+  - Yoga (from `https://github.com/facebook/yoga`, tag `1.7.0`)
 
 SPEC REPOS:
   https://github.com/CocoaPods/Specs.git:
+    - HWPanModal
     - JKCategories
     - QMUIKit
 
+EXTERNAL SOURCES:
+  Yoga:
+    :git: https://github.com/facebook/yoga
+    :tag: 1.7.0
+
+CHECKOUT OPTIONS:
+  Yoga:
+    :git: https://github.com/facebook/yoga
+    :tag: 1.7.0
+
 SPEC CHECKSUMS:
+  HWPanModal: b5f2a7df8eab0070f13bb93f587f1c64b87afabb
   JKCategories: 9dcef0d8be9ff22fdfebd86b83711ff11cd109dd
   QMUIKit: 4914306e357359d79a118557cc34513dfb3b12ab
+  Yoga: 983d0c15b9676d5beeea25103fd5673fd481b123
 
-PODFILE CHECKSUM: ce10be67a859e39ece9f8ab7eb0cf747e7aa61cc
+PODFILE CHECKSUM: 2a3d53b7586ea4f47c31eabf6bf054337e05b023
 
 COCOAPODS: 1.8.4

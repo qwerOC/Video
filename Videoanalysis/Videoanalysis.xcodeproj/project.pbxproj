@@ -8,6 +8,11 @@
 
 /* Begin PBXBuildFile section */
 		20A1853A49F00A7F60DF2998 /* libPods-Videoanalysis.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4213841F8925252ED6977FB8 /* libPods-Videoanalysis.a */; };
+		764E611A2390F99F000E41E2 /* HostTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 764E61192390F99F000E41E2 /* HostTableViewCell.m */; };
+		764E611E2390F9C8000E41E2 /* HostVideoCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 764E611C2390F9C8000E41E2 /* HostVideoCell.m */; };
+		764E611F2390F9C8000E41E2 /* HostVideoCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 764E611D2390F9C8000E41E2 /* HostVideoCell.xib */; };
+		764E6125239141CB000E41E2 /* NGConsultingDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 764E6121239141CA000E41E2 /* NGConsultingDetailViewController.m */; };
+		764E6126239141CB000E41E2 /* PlayViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 764E6124239141CB000E41E2 /* PlayViewController.m */; };
 		7651A929238BA00500574813 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 7651A928238BA00500574813 /* AppDelegate.m */; };
 		7651A92C238BA00500574813 /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 7651A92B238BA00500574813 /* SceneDelegate.m */; };
 		7651A92F238BA00500574813 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7651A92E238BA00500574813 /* ViewController.m */; };
@@ -17,6 +22,10 @@
 		7651A93A238BA00800574813 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 7651A939238BA00800574813 /* main.m */; };
 		7651A965238BA7B700574813 /* HostVideoVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 7651A964238BA7B700574813 /* HostVideoVC.m */; };
 		7651A968238BA7C600574813 /* HostMineVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 7651A967238BA7C600574813 /* HostMineVC.m */; };
+		76C4A7A4239A81DE00A0F5F3 /* HostPopVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 76C4A7A3239A81DE00A0F5F3 /* HostPopVC.m */; };
+		76C4A7A8239DF77900A0F5F3 /* analysis.json in Resources */ = {isa = PBXBuildFile; fileRef = 76C4A7A7239DF77800A0F5F3 /* analysis.json */; };
+		76C4A7AB239E010C00A0F5F3 /* HWNavViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 76C4A7A9239E010B00A0F5F3 /* HWNavViewController.m */; };
+		76C4A7AE239E1E6C00A0F5F3 /* HostanalysisVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 76C4A7AD239E1E6C00A0F5F3 /* HostanalysisVC.m */; };
 		76DE278C2390ED4900C5671D /* HostBaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 76DE27802390ED4900C5671D /* HostBaseViewController.m */; };
 		76DE278D2390ED4900C5671D /* HostBaseWebViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 76DE27832390ED4900C5671D /* HostBaseWebViewController.xib */; };
 		76DE278E2390ED4900C5671D /* HostUINavigationController+FDFullscreenPopGesture.m in Sources */ = {isa = PBXBuildFile; fileRef = 76DE27852390ED4900C5671D /* HostUINavigationController+FDFullscreenPopGesture.m */; };
@@ -28,6 +37,15 @@
 /* Begin PBXFileReference section */
 		4213841F8925252ED6977FB8 /* libPods-Videoanalysis.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Videoanalysis.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		606BD8CC968C7261F2CCEB20 /* Pods-Videoanalysis.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Videoanalysis.release.xcconfig"; path = "Target Support Files/Pods-Videoanalysis/Pods-Videoanalysis.release.xcconfig"; sourceTree = "<group>"; };
+		764E61182390F99F000E41E2 /* HostTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HostTableViewCell.h; sourceTree = "<group>"; };
+		764E61192390F99F000E41E2 /* HostTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HostTableViewCell.m; sourceTree = "<group>"; };
+		764E611B2390F9C8000E41E2 /* HostVideoCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HostVideoCell.h; sourceTree = "<group>"; };
+		764E611C2390F9C8000E41E2 /* HostVideoCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HostVideoCell.m; sourceTree = "<group>"; };
+		764E611D2390F9C8000E41E2 /* HostVideoCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HostVideoCell.xib; sourceTree = "<group>"; };
+		764E6121239141CA000E41E2 /* NGConsultingDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NGConsultingDetailViewController.m; sourceTree = "<group>"; };
+		764E6122239141CA000E41E2 /* PlayViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlayViewController.h; sourceTree = "<group>"; };
+		764E6123239141CB000E41E2 /* NGConsultingDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NGConsultingDetailViewController.h; sourceTree = "<group>"; };
+		764E6124239141CB000E41E2 /* PlayViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlayViewController.m; sourceTree = "<group>"; };
 		7651A924238BA00500574813 /* Videoanalysis.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Videoanalysis.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7651A927238BA00500574813 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		7651A928238BA00500574813 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -45,6 +63,13 @@
 		7651A964238BA7B700574813 /* HostVideoVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HostVideoVC.m; sourceTree = "<group>"; };
 		7651A966238BA7C600574813 /* HostMineVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HostMineVC.h; sourceTree = "<group>"; };
 		7651A967238BA7C600574813 /* HostMineVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HostMineVC.m; sourceTree = "<group>"; };
+		76C4A7A2239A81DE00A0F5F3 /* HostPopVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HostPopVC.h; sourceTree = "<group>"; };
+		76C4A7A3239A81DE00A0F5F3 /* HostPopVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HostPopVC.m; sourceTree = "<group>"; };
+		76C4A7A7239DF77800A0F5F3 /* analysis.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = analysis.json; sourceTree = "<group>"; };
+		76C4A7A9239E010B00A0F5F3 /* HWNavViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HWNavViewController.m; sourceTree = "<group>"; };
+		76C4A7AA239E010C00A0F5F3 /* HWNavViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HWNavViewController.h; sourceTree = "<group>"; };
+		76C4A7AC239E1E6C00A0F5F3 /* HostanalysisVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HostanalysisVC.h; sourceTree = "<group>"; };
+		76C4A7AD239E1E6C00A0F5F3 /* HostanalysisVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HostanalysisVC.m; sourceTree = "<group>"; };
 		76DE27802390ED4900C5671D /* HostBaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HostBaseViewController.m; sourceTree = "<group>"; };
 		76DE27812390ED4900C5671D /* HostBaseWebViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HostBaseWebViewController.h; sourceTree = "<group>"; };
 		76DE27822390ED4900C5671D /* HostMuTabbarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HostMuTabbarController.h; sourceTree = "<group>"; };
@@ -88,6 +113,17 @@
 			path = Pods;
 			sourceTree = "<group>";
 		};
+		764E6120239141BF000E41E2 /* play */ = {
+			isa = PBXGroup;
+			children = (
+				764E6123239141CB000E41E2 /* NGConsultingDetailViewController.h */,
+				764E6121239141CA000E41E2 /* NGConsultingDetailViewController.m */,
+				764E6122239141CA000E41E2 /* PlayViewController.h */,
+				764E6124239141CB000E41E2 /* PlayViewController.m */,
+			);
+			path = play;
+			sourceTree = "<group>";
+		};
 		7651A91B238BA00500574813 = {
 			isa = PBXGroup;
 			children = (
@@ -125,6 +161,7 @@
 				7651A962238BA66900574813 /* MuPrefixHeader.pch */,
 				7651A92A238BA00500574813 /* SceneDelegate.h */,
 				7651A92B238BA00500574813 /* SceneDelegate.m */,
+				76C4A7A7239DF77800A0F5F3 /* analysis.json */,
 			);
 			path = Videoanalysis;
 			sourceTree = "<group>";
@@ -143,6 +180,8 @@
 			children = (
 				7651A966238BA7C600574813 /* HostMineVC.h */,
 				7651A967238BA7C600574813 /* HostMineVC.m */,
+				76C4A7AC239E1E6C00A0F5F3 /* HostanalysisVC.h */,
+				76C4A7AD239E1E6C00A0F5F3 /* HostanalysisVC.m */,
 			);
 			path = Mine;
 			sourceTree = "<group>";
@@ -150,8 +189,14 @@
 		7651A95A238BA1B400574813 /* Video */ = {
 			isa = PBXGroup;
 			children = (
+				764E6120239141BF000E41E2 /* play */,
 				7651A963238BA7B700574813 /* HostVideoVC.h */,
 				7651A964238BA7B700574813 /* HostVideoVC.m */,
+				764E611B2390F9C8000E41E2 /* HostVideoCell.h */,
+				764E611C2390F9C8000E41E2 /* HostVideoCell.m */,
+				764E611D2390F9C8000E41E2 /* HostVideoCell.xib */,
+				76C4A7A2239A81DE00A0F5F3 /* HostPopVC.h */,
+				76C4A7A3239A81DE00A0F5F3 /* HostPopVC.m */,
 			);
 			path = Video;
 			sourceTree = "<group>";
@@ -166,6 +211,8 @@
 		76DE277F2390ED4900C5671D /* Base */ = {
 			isa = PBXGroup;
 			children = (
+				76C4A7AA239E010C00A0F5F3 /* HWNavViewController.h */,
+				76C4A7A9239E010B00A0F5F3 /* HWNavViewController.m */,
 				76DE27842390ED4900C5671D /* FDFullscreenPopGesture */,
 				76DE27872390ED4900C5671D /* HostBaseNavigationController.h */,
 				76DE278B2390ED4900C5671D /* HostBaseNavigationController.m */,
@@ -176,6 +223,8 @@
 				76DE27832390ED4900C5671D /* HostBaseWebViewController.xib */,
 				76DE27822390ED4900C5671D /* HostMuTabbarController.h */,
 				76DE27892390ED4900C5671D /* HostMuTabbarController.m */,
+				764E61182390F99F000E41E2 /* HostTableViewCell.h */,
+				764E61192390F99F000E41E2 /* HostTableViewCell.m */,
 			);
 			path = Base;
 			sourceTree = "<group>";
@@ -249,9 +298,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				76DE278D2390ED4900C5671D /* HostBaseWebViewController.xib in Resources */,
+				76C4A7A8239DF77900A0F5F3 /* analysis.json in Resources */,
 				7651A937238BA00800574813 /* LaunchScreen.storyboard in Resources */,
 				7651A934238BA00800574813 /* Assets.xcassets in Resources */,
 				7651A932238BA00500574813 /* Main.storyboard in Resources */,
+				764E611F2390F9C8000E41E2 /* HostVideoCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -304,17 +355,24 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				764E6125239141CB000E41E2 /* NGConsultingDetailViewController.m in Sources */,
 				76DE27902390ED4900C5671D /* HostBaseWebViewController.m in Sources */,
 				76DE278C2390ED4900C5671D /* HostBaseViewController.m in Sources */,
 				7651A968238BA7C600574813 /* HostMineVC.m in Sources */,
 				7651A92F238BA00500574813 /* ViewController.m in Sources */,
 				76DE27912390ED4900C5671D /* HostBaseNavigationController.m in Sources */,
+				76C4A7AB239E010C00A0F5F3 /* HWNavViewController.m in Sources */,
 				7651A929238BA00500574813 /* AppDelegate.m in Sources */,
+				76C4A7AE239E1E6C00A0F5F3 /* HostanalysisVC.m in Sources */,
 				76DE278E2390ED4900C5671D /* HostUINavigationController+FDFullscreenPopGesture.m in Sources */,
 				7651A93A238BA00800574813 /* main.m in Sources */,
+				764E611E2390F9C8000E41E2 /* HostVideoCell.m in Sources */,
 				7651A92C238BA00500574813 /* SceneDelegate.m in Sources */,
 				7651A965238BA7B700574813 /* HostVideoVC.m in Sources */,
+				76C4A7A4239A81DE00A0F5F3 /* HostPopVC.m in Sources */,
 				76DE278F2390ED4900C5671D /* HostMuTabbarController.m in Sources */,
+				764E6126239141CB000E41E2 /* PlayViewController.m in Sources */,
+				764E611A2390F99F000E41E2 /* HostTableViewCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -457,7 +515,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 4E7GHM6C9T;
+				DEVELOPMENT_TEAM = XNRZ33ZW7W;
 				ENABLE_BITCODE = NO;
 				GCC_PREFIX_HEADER = ../Videoanalysis/Videoanalysis/MuPrefixHeader.pch;
 				INFOPLIST_FILE = Videoanalysis/Info.plist;
@@ -483,7 +541,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 4E7GHM6C9T;
+				DEVELOPMENT_TEAM = XNRZ33ZW7W;
 				ENABLE_BITCODE = NO;
 				GCC_PREFIX_HEADER = ../Videoanalysis/Videoanalysis/MuPrefixHeader.pch;
 				INFOPLIST_FILE = Videoanalysis/Info.plist;

@@ -20,7 +20,10 @@
     _tabbarVC=[[HostMuTabbarController  alloc] init];
     self.window.rootViewController=_tabbarVC;
     [self.window makeKeyAndVisible];
-    
+    //设置导航条文字颜色 白色
+      [[UINavigationBar appearance] setTitleTextAttributes:@{NSForegroundColorAttributeName:[UIColor blackColor]}];
+      //设置按钮文字颜色 白色
+      [[UINavigationBar appearance] setTintColor:[UIColor blackColor]];
     return YES;
 }
 

@@ -1,0 +1,1 @@
+../../../HWPanModal/Sources/View/HWPanIndicatorView.h

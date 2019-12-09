@@ -3,5 +3,6 @@ platform :ios, '9.0'
 target "Videoanalysis" do
  pod 'JKCategories', '~> 1.8.2'
  pod 'QMUIKit'
-
+ pod 'HWPanModal', '~> 0.6.0'
+ pod 'Yoga', :git => 'https://github.com/facebook/yoga', :tag => '1.7.0'
 end

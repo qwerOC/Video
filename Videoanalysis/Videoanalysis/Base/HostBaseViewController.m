@@ -18,7 +18,6 @@
     [super viewDidLoad];
     self.popGestureEnable = YES;
     self.view.backgroundColor =UIColorWhite ;
-    self.navigationController.navigationBar.barStyle = UIBarStyleDefault;
     [self setNeedsStatusBarAppearanceUpdate];
     if (@available(iOS 11.0, *)) {
         [UIScrollView appearance].contentInsetAdjustmentBehavior = UIScrollViewContentInsetAdjustmentNever;
@@ -30,6 +29,9 @@
     self.page_size = 20;
 }
 
+-(BOOL)prefersStatusBarHidden{
+    return NO;
+} 
 - (void)setPopGestureEnable:(BOOL)popGestureEnable{
     if (!popGestureEnable) {
         id traget = self.navigationController.interactivePopGestureRecognizer.delegate;
@@ -46,7 +48,7 @@
     
     AppDelegate * app = (AppDelegate *)[UIApplication sharedApplication].delegate;
     app.tabbarVC = tabbar;
-
+    
     [UIApplication sharedApplication].delegate.window.rootViewController =tabbar;
 }
 
@@ -65,7 +67,7 @@
 
 
 - (void)creatRightBtnOfUploadList{
-        self.navigationItem.rightBarButtonItem=[[UIBarButtonItem alloc]initWithTitle:@"上传列表" style:UIBarButtonItemStylePlain target:self action:@selector(uploadList)];
+    self.navigationItem.rightBarButtonItem=[[UIBarButtonItem alloc]initWithTitle:@"上传列表" style:UIBarButtonItemStylePlain target:self action:@selector(uploadList)];
 }
 
 - (void)uploadList{
@@ -98,12 +100,31 @@
 }
 
 - (void)creatLeftBtnOfCustomWithTitle:(NSString *)title{
-    self.navigationItem.leftBarButtonItem=[[UIBarButtonItem alloc]initWithTitle:title style:UIBarButtonItemStylePlain target:self action:@selector(leftBtnClcik)];
+    self.navigationItem.leftBarButtonItem=[[UIBarButtonItem alloc]initWithTitle:title
+                                                                          style:UIBarButtonItemStylePlain
+                                                                         target:self
+                                                                         action:@selector(leftBtnClcik)];
+}
+-(void)creatRightBtnOfCustomWithTitle:(NSString *)title{
+    self.navigationItem.rightBarButtonItem=[[UIBarButtonItem alloc]initWithTitle:title
+                                                                          style:UIBarButtonItemStylePlain
+                                                                         target:self
+                                                                         action:@selector(rigthBtnClcik)];
+
+}
+-(void)rigthBtnClcik{
+    
 }
 - (void)leftBtnClcik{
     
 }
-
+-(UIBarButtonItem*)leftMenuBarButtonItem{
+    
+    return [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"back"]
+                                            style:UIBarButtonItemStylePlain
+                                           target:self
+                                           action:@selector(returnClick)];
+}
 
 
 

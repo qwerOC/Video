@@ -22,6 +22,7 @@
 #import "HostBaseNavigationController.h"
 #import "HostBaseWebViewController.h"
 #import <QMUIKit.h>
+#import "HWPanModal.h"
 #pragma mark 国际化操作
 #define NGLocalizedString(str) NSLocalizedString(str, @"")
 
@@ -68,6 +69,7 @@
 #define Camera (MuScreen_Height > 812.0 ? 64 : 20)//导航高度？
 #define StatusBarHeight (MuScreen_Height >= 812.0 ? 44 : 20)//导航高度？
 #define SafeAreaBottomHeight (MuScreen_Height >= 812.0 ? 34 : 0)//底部
+#define NGTabBarHeight 49
 #define MuDevice_Is_iPhoneX ([UIScreen instancesRespondToSelector:@selector(currentMode)] ? CGSizeEqualToSize(CGSizeMake(1125, 2436), [[UIScreen mainScreen] currentMode].size) : NO)
 #define    MuStatusBar_Height  MuDevice_Is_iPhoneX?44:20//运营状态栏
 #define isIphoneX ((double)MuScreen_Height >= 812.0 ? 1 : 0)
