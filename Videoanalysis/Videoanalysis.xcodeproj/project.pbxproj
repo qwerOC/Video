@@ -26,6 +26,7 @@
 		76C4A7A8239DF77900A0F5F3 /* analysis.json in Resources */ = {isa = PBXBuildFile; fileRef = 76C4A7A7239DF77800A0F5F3 /* analysis.json */; };
 		76C4A7AB239E010C00A0F5F3 /* HWNavViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 76C4A7A9239E010B00A0F5F3 /* HWNavViewController.m */; };
 		76C4A7AE239E1E6C00A0F5F3 /* HostanalysisVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 76C4A7AD239E1E6C00A0F5F3 /* HostanalysisVC.m */; };
+		76C4A7B2239E303500A0F5F3 /* imgaLogo.png in Resources */ = {isa = PBXBuildFile; fileRef = 76C4A7B1239E303500A0F5F3 /* imgaLogo.png */; };
 		76DE278C2390ED4900C5671D /* HostBaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 76DE27802390ED4900C5671D /* HostBaseViewController.m */; };
 		76DE278D2390ED4900C5671D /* HostBaseWebViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 76DE27832390ED4900C5671D /* HostBaseWebViewController.xib */; };
 		76DE278E2390ED4900C5671D /* HostUINavigationController+FDFullscreenPopGesture.m in Sources */ = {isa = PBXBuildFile; fileRef = 76DE27852390ED4900C5671D /* HostUINavigationController+FDFullscreenPopGesture.m */; };
@@ -46,7 +47,7 @@
 		764E6122239141CA000E41E2 /* PlayViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlayViewController.h; sourceTree = "<group>"; };
 		764E6123239141CB000E41E2 /* NGConsultingDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NGConsultingDetailViewController.h; sourceTree = "<group>"; };
 		764E6124239141CB000E41E2 /* PlayViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlayViewController.m; sourceTree = "<group>"; };
-		7651A924238BA00500574813 /* Videoanalysis.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Videoanalysis.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		7651A924238BA00500574813 /* 闪电影视大全.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "闪电影视大全.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		7651A927238BA00500574813 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		7651A928238BA00500574813 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		7651A92A238BA00500574813 /* SceneDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SceneDelegate.h; sourceTree = "<group>"; };
@@ -70,6 +71,7 @@
 		76C4A7AA239E010C00A0F5F3 /* HWNavViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HWNavViewController.h; sourceTree = "<group>"; };
 		76C4A7AC239E1E6C00A0F5F3 /* HostanalysisVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HostanalysisVC.h; sourceTree = "<group>"; };
 		76C4A7AD239E1E6C00A0F5F3 /* HostanalysisVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HostanalysisVC.m; sourceTree = "<group>"; };
+		76C4A7B1239E303500A0F5F3 /* imgaLogo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = imgaLogo.png; sourceTree = "<group>"; };
 		76DE27802390ED4900C5671D /* HostBaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HostBaseViewController.m; sourceTree = "<group>"; };
 		76DE27812390ED4900C5671D /* HostBaseWebViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HostBaseWebViewController.h; sourceTree = "<group>"; };
 		76DE27822390ED4900C5671D /* HostMuTabbarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HostMuTabbarController.h; sourceTree = "<group>"; };
@@ -138,7 +140,7 @@
 		7651A925238BA00500574813 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				7651A924238BA00500574813 /* Videoanalysis.app */,
+				7651A924238BA00500574813 /* 闪电影视大全.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -158,6 +160,7 @@
 				7651A935238BA00800574813 /* LaunchScreen.storyboard */,
 				7651A939238BA00800574813 /* main.m */,
 				7651A930238BA00500574813 /* Main.storyboard */,
+				76C4A7B1239E303500A0F5F3 /* imgaLogo.png */,
 				7651A962238BA66900574813 /* MuPrefixHeader.pch */,
 				7651A92A238BA00500574813 /* SceneDelegate.h */,
 				7651A92B238BA00500574813 /* SceneDelegate.m */,
@@ -257,7 +260,7 @@
 			);
 			name = Videoanalysis;
 			productName = Videoanalysis;
-			productReference = 7651A924238BA00500574813 /* Videoanalysis.app */;
+			productReference = 7651A924238BA00500574813 /* 闪电影视大全.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -301,6 +304,7 @@
 				76C4A7A8239DF77900A0F5F3 /* analysis.json in Resources */,
 				7651A937238BA00800574813 /* LaunchScreen.storyboard in Resources */,
 				7651A934238BA00800574813 /* Assets.xcassets in Resources */,
+				76C4A7B2239E303500A0F5F3 /* imgaLogo.png in Resources */,
 				7651A932238BA00500574813 /* Main.storyboard in Resources */,
 				764E611F2390F9C8000E41E2 /* HostVideoCell.xib in Resources */,
 			);
@@ -527,7 +531,7 @@
 				ONLY_ACTIVE_ARCH = YES;
 				OTHER_LDFLAGS = "$(inherited)";
 				PRODUCT_BUNDLE_IDENTIFIER = com.demo1.Videoanalysis;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "闪电影视大全";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				TARGETED_DEVICE_FAMILY = 1;
 				VALID_ARCHS = "armv7 arm64";
@@ -553,7 +557,7 @@
 				ONLY_ACTIVE_ARCH = YES;
 				OTHER_LDFLAGS = "$(inherited)";
 				PRODUCT_BUNDLE_IDENTIFIER = com.demo1.Videoanalysis;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "闪电影视大全";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				TARGETED_DEVICE_FAMILY = 1;
 				VALID_ARCHS = "armv7 arm64";
