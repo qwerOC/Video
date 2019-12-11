@@ -1,1 +1,0 @@
-../../../HWPanModal/Sources/Delegate/HWPanModalPresentationDelegate.h

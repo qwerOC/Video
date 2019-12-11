@@ -1,1 +1,0 @@
-../../../HWPanModal/Sources/Animator/PresentingVCAnimation/HWShoppingCartPresentingAnimation.h

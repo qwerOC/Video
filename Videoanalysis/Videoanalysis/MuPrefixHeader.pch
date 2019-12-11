@@ -16,13 +16,21 @@
 
 #pragma mark --Tool.h
 
+#define DBAnalysis "DBAnalysis"
+#define DBVideo "DBVideo"
+                                               
 #import "JKCategories.h"
 #import "HostBaseViewController.h"
 #import "HostMuTabbarController.h"
 #import "HostBaseNavigationController.h"
 #import "HostBaseWebViewController.h"
-#import <QMUIKit.h>
 #import "HWPanModal.h"
+#import <QMUIKit/QMUIKit.h>
+#define MAS_SHORTHAND
+#define MAS_SHORTHAND_GLOBALS
+#import <Masonry.h>
+
+#import "HostsTools.h"
 #pragma mark 国际化操作
 #define NGLocalizedString(str) NSLocalizedString(str, @"")
 

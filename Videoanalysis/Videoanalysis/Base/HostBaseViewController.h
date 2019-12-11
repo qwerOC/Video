@@ -131,6 +131,8 @@ NS_ASSUME_NONNULL_BEGIN
 
 /// 点击空白视图
 @property(nonatomic, copy) void (^clikEmptyView)(void);
+-(void)rigthBtnClcik;
+-(void)leftBtnClcik;
 @end
 
 NS_ASSUME_NONNULL_END

@@ -7,7 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		20A1853A49F00A7F60DF2998 /* libPods-Videoanalysis.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4213841F8925252ED6977FB8 /* libPods-Videoanalysis.a */; };
+		14E404ECA9E5430C7D0C0991 /* Pods_Videoanalysis.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9F5351FF2ED02C60A80B5ABB /* Pods_Videoanalysis.framework */; };
+		761E3ACD23A098010059CB93 /* HostsTools.m in Sources */ = {isa = PBXBuildFile; fileRef = 761E3ACC23A098010059CB93 /* HostsTools.m */; };
 		764E611A2390F99F000E41E2 /* HostTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 764E61192390F99F000E41E2 /* HostTableViewCell.m */; };
 		764E611E2390F9C8000E41E2 /* HostVideoCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 764E611C2390F9C8000E41E2 /* HostVideoCell.m */; };
 		764E611F2390F9C8000E41E2 /* HostVideoCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 764E611D2390F9C8000E41E2 /* HostVideoCell.xib */; };
@@ -22,11 +23,15 @@
 		7651A93A238BA00800574813 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 7651A939238BA00800574813 /* main.m */; };
 		7651A965238BA7B700574813 /* HostVideoVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 7651A964238BA7B700574813 /* HostVideoVC.m */; };
 		7651A968238BA7C600574813 /* HostMineVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 7651A967238BA7C600574813 /* HostMineVC.m */; };
+		765240EB239F541E00D564B8 /* swiftBridge.swift in Sources */ = {isa = PBXBuildFile; fileRef = 765240EA239F541E00D564B8 /* swiftBridge.swift */; };
 		76C4A7A4239A81DE00A0F5F3 /* HostPopVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 76C4A7A3239A81DE00A0F5F3 /* HostPopVC.m */; };
 		76C4A7A8239DF77900A0F5F3 /* analysis.json in Resources */ = {isa = PBXBuildFile; fileRef = 76C4A7A7239DF77800A0F5F3 /* analysis.json */; };
 		76C4A7AB239E010C00A0F5F3 /* HWNavViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 76C4A7A9239E010B00A0F5F3 /* HWNavViewController.m */; };
 		76C4A7AE239E1E6C00A0F5F3 /* HostanalysisVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 76C4A7AD239E1E6C00A0F5F3 /* HostanalysisVC.m */; };
 		76C4A7B2239E303500A0F5F3 /* imgaLogo.png in Resources */ = {isa = PBXBuildFile; fileRef = 76C4A7B1239E303500A0F5F3 /* imgaLogo.png */; };
+		76C4A7B6239F37CA00A0F5F3 /* HostDBManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 76C4A7B5239F37CA00A0F5F3 /* HostDBManager.m */; };
+		76C4A7B9239F383100A0F5F3 /* HostBaseModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 76C4A7B8239F383100A0F5F3 /* HostBaseModel.m */; };
+		76C4A7BC239F384F00A0F5F3 /* HostDBModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 76C4A7BB239F384F00A0F5F3 /* HostDBModel.m */; };
 		76DE278C2390ED4900C5671D /* HostBaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 76DE27802390ED4900C5671D /* HostBaseViewController.m */; };
 		76DE278D2390ED4900C5671D /* HostBaseWebViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 76DE27832390ED4900C5671D /* HostBaseWebViewController.xib */; };
 		76DE278E2390ED4900C5671D /* HostUINavigationController+FDFullscreenPopGesture.m in Sources */ = {isa = PBXBuildFile; fileRef = 76DE27852390ED4900C5671D /* HostUINavigationController+FDFullscreenPopGesture.m */; };
@@ -36,8 +41,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		4213841F8925252ED6977FB8 /* libPods-Videoanalysis.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Videoanalysis.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		606BD8CC968C7261F2CCEB20 /* Pods-Videoanalysis.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Videoanalysis.release.xcconfig"; path = "Target Support Files/Pods-Videoanalysis/Pods-Videoanalysis.release.xcconfig"; sourceTree = "<group>"; };
+		761E3ACB23A098010059CB93 /* HostsTools.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HostsTools.h; sourceTree = "<group>"; };
+		761E3ACC23A098010059CB93 /* HostsTools.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HostsTools.m; sourceTree = "<group>"; };
 		764E61182390F99F000E41E2 /* HostTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HostTableViewCell.h; sourceTree = "<group>"; };
 		764E61192390F99F000E41E2 /* HostTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HostTableViewCell.m; sourceTree = "<group>"; };
 		764E611B2390F9C8000E41E2 /* HostVideoCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HostVideoCell.h; sourceTree = "<group>"; };
@@ -64,6 +70,8 @@
 		7651A964238BA7B700574813 /* HostVideoVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HostVideoVC.m; sourceTree = "<group>"; };
 		7651A966238BA7C600574813 /* HostMineVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HostMineVC.h; sourceTree = "<group>"; };
 		7651A967238BA7C600574813 /* HostMineVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HostMineVC.m; sourceTree = "<group>"; };
+		765240E9239F541E00D564B8 /* Videoanalysis-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Videoanalysis-Bridging-Header.h"; sourceTree = "<group>"; };
+		765240EA239F541E00D564B8 /* swiftBridge.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = swiftBridge.swift; sourceTree = "<group>"; };
 		76C4A7A2239A81DE00A0F5F3 /* HostPopVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HostPopVC.h; sourceTree = "<group>"; };
 		76C4A7A3239A81DE00A0F5F3 /* HostPopVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HostPopVC.m; sourceTree = "<group>"; };
 		76C4A7A7239DF77800A0F5F3 /* analysis.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = analysis.json; sourceTree = "<group>"; };
@@ -72,6 +80,12 @@
 		76C4A7AC239E1E6C00A0F5F3 /* HostanalysisVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HostanalysisVC.h; sourceTree = "<group>"; };
 		76C4A7AD239E1E6C00A0F5F3 /* HostanalysisVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HostanalysisVC.m; sourceTree = "<group>"; };
 		76C4A7B1239E303500A0F5F3 /* imgaLogo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = imgaLogo.png; sourceTree = "<group>"; };
+		76C4A7B4239F37CA00A0F5F3 /* HostDBManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HostDBManager.h; sourceTree = "<group>"; };
+		76C4A7B5239F37CA00A0F5F3 /* HostDBManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HostDBManager.m; sourceTree = "<group>"; };
+		76C4A7B7239F383100A0F5F3 /* HostBaseModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HostBaseModel.h; sourceTree = "<group>"; };
+		76C4A7B8239F383100A0F5F3 /* HostBaseModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HostBaseModel.m; sourceTree = "<group>"; };
+		76C4A7BA239F384F00A0F5F3 /* HostDBModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HostDBModel.h; sourceTree = "<group>"; };
+		76C4A7BB239F384F00A0F5F3 /* HostDBModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HostDBModel.m; sourceTree = "<group>"; };
 		76DE27802390ED4900C5671D /* HostBaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HostBaseViewController.m; sourceTree = "<group>"; };
 		76DE27812390ED4900C5671D /* HostBaseWebViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HostBaseWebViewController.h; sourceTree = "<group>"; };
 		76DE27822390ED4900C5671D /* HostMuTabbarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HostMuTabbarController.h; sourceTree = "<group>"; };
@@ -83,6 +97,7 @@
 		76DE27892390ED4900C5671D /* HostMuTabbarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HostMuTabbarController.m; sourceTree = "<group>"; };
 		76DE278A2390ED4900C5671D /* HostBaseWebViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HostBaseWebViewController.m; sourceTree = "<group>"; };
 		76DE278B2390ED4900C5671D /* HostBaseNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HostBaseNavigationController.m; sourceTree = "<group>"; };
+		9F5351FF2ED02C60A80B5ABB /* Pods_Videoanalysis.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Videoanalysis.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FFE52FF4F935BCBD93577F2B /* Pods-Videoanalysis.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Videoanalysis.debug.xcconfig"; path = "Target Support Files/Pods-Videoanalysis/Pods-Videoanalysis.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -91,7 +106,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				20A1853A49F00A7F60DF2998 /* libPods-Videoanalysis.a in Frameworks */,
+				14E404ECA9E5430C7D0C0991 /* Pods_Videoanalysis.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -101,7 +116,7 @@
 		29E2B933EC17BEFE2A733DB7 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				4213841F8925252ED6977FB8 /* libPods-Videoanalysis.a */,
+				9F5351FF2ED02C60A80B5ABB /* Pods_Videoanalysis.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -133,6 +148,7 @@
 				7651A925238BA00500574813 /* Products */,
 				5FE32D15EE094F7F03D79F66 /* Pods */,
 				29E2B933EC17BEFE2A733DB7 /* Frameworks */,
+				765240E9239F541E00D564B8 /* Videoanalysis-Bridging-Header.h */,
 			);
 			sourceTree = "<group>";
 			wrapsLines = 0;
@@ -165,6 +181,7 @@
 				7651A92A238BA00500574813 /* SceneDelegate.h */,
 				7651A92B238BA00500574813 /* SceneDelegate.m */,
 				76C4A7A7239DF77800A0F5F3 /* analysis.json */,
+				765240EA239F541E00D564B8 /* swiftBridge.swift */,
 			);
 			path = Videoanalysis;
 			sourceTree = "<group>";
@@ -207,8 +224,22 @@
 		7651A969238BA8EE00574813 /* Tool */ = {
 			isa = PBXGroup;
 			children = (
+				76C4A7B3239F37AD00A0F5F3 /* FMDB */,
+				761E3ACB23A098010059CB93 /* HostsTools.h */,
+				761E3ACC23A098010059CB93 /* HostsTools.m */,
 			);
 			path = Tool;
+			sourceTree = "<group>";
+		};
+		76C4A7B3239F37AD00A0F5F3 /* FMDB */ = {
+			isa = PBXGroup;
+			children = (
+				76C4A7B4239F37CA00A0F5F3 /* HostDBManager.h */,
+				76C4A7B5239F37CA00A0F5F3 /* HostDBManager.m */,
+				76C4A7BA239F384F00A0F5F3 /* HostDBModel.h */,
+				76C4A7BB239F384F00A0F5F3 /* HostDBModel.m */,
+			);
+			path = FMDB;
 			sourceTree = "<group>";
 		};
 		76DE277F2390ED4900C5671D /* Base */ = {
@@ -228,6 +259,8 @@
 				76DE27892390ED4900C5671D /* HostMuTabbarController.m */,
 				764E61182390F99F000E41E2 /* HostTableViewCell.h */,
 				764E61192390F99F000E41E2 /* HostTableViewCell.m */,
+				76C4A7B7239F383100A0F5F3 /* HostBaseModel.h */,
+				76C4A7B8239F383100A0F5F3 /* HostBaseModel.m */,
 			);
 			path = Base;
 			sourceTree = "<group>";
@@ -252,7 +285,7 @@
 				7651A920238BA00500574813 /* Sources */,
 				7651A921238BA00500574813 /* Frameworks */,
 				7651A922238BA00500574813 /* Resources */,
-				7FC363C433D40D0B88550295 /* [CP] Copy Pods Resources */,
+				FF8AE4DA75F0FB48CC3100A8 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -274,6 +307,7 @@
 				TargetAttributes = {
 					7651A923238BA00500574813 = {
 						CreatedOnToolsVersion = 11.1;
+						LastSwiftMigration = 1110;
 					};
 				};
 			};
@@ -335,21 +369,21 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		7FC363C433D40D0B88550295 /* [CP] Copy Pods Resources */ = {
+		FF8AE4DA75F0FB48CC3100A8 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-Videoanalysis/Pods-Videoanalysis-resources-${CONFIGURATION}-input-files.xcfilelist",
+				"${PODS_ROOT}/Target Support Files/Pods-Videoanalysis/Pods-Videoanalysis-frameworks-${CONFIGURATION}-input-files.xcfilelist",
 			);
-			name = "[CP] Copy Pods Resources";
+			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-Videoanalysis/Pods-Videoanalysis-resources-${CONFIGURATION}-output-files.xcfilelist",
+				"${PODS_ROOT}/Target Support Files/Pods-Videoanalysis/Pods-Videoanalysis-frameworks-${CONFIGURATION}-output-files.xcfilelist",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Videoanalysis/Pods-Videoanalysis-resources.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Videoanalysis/Pods-Videoanalysis-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -363,20 +397,25 @@
 				76DE27902390ED4900C5671D /* HostBaseWebViewController.m in Sources */,
 				76DE278C2390ED4900C5671D /* HostBaseViewController.m in Sources */,
 				7651A968238BA7C600574813 /* HostMineVC.m in Sources */,
+				765240EB239F541E00D564B8 /* swiftBridge.swift in Sources */,
 				7651A92F238BA00500574813 /* ViewController.m in Sources */,
 				76DE27912390ED4900C5671D /* HostBaseNavigationController.m in Sources */,
 				76C4A7AB239E010C00A0F5F3 /* HWNavViewController.m in Sources */,
+				76C4A7B6239F37CA00A0F5F3 /* HostDBManager.m in Sources */,
 				7651A929238BA00500574813 /* AppDelegate.m in Sources */,
 				76C4A7AE239E1E6C00A0F5F3 /* HostanalysisVC.m in Sources */,
 				76DE278E2390ED4900C5671D /* HostUINavigationController+FDFullscreenPopGesture.m in Sources */,
 				7651A93A238BA00800574813 /* main.m in Sources */,
 				764E611E2390F9C8000E41E2 /* HostVideoCell.m in Sources */,
+				76C4A7BC239F384F00A0F5F3 /* HostDBModel.m in Sources */,
 				7651A92C238BA00500574813 /* SceneDelegate.m in Sources */,
 				7651A965238BA7B700574813 /* HostVideoVC.m in Sources */,
 				76C4A7A4239A81DE00A0F5F3 /* HostPopVC.m in Sources */,
+				76C4A7B9239F383100A0F5F3 /* HostBaseModel.m in Sources */,
 				76DE278F2390ED4900C5671D /* HostMuTabbarController.m in Sources */,
 				764E6126239141CB000E41E2 /* PlayViewController.m in Sources */,
 				764E611A2390F99F000E41E2 /* HostTableViewCell.m in Sources */,
+				761E3ACD23A098010059CB93 /* HostsTools.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -517,6 +556,7 @@
 			baseConfigurationReference = FFE52FF4F935BCBD93577F2B /* Pods-Videoanalysis.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = XNRZ33ZW7W;
@@ -533,6 +573,9 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.demo1.Videoanalysis;
 				PRODUCT_NAME = "闪电影视大全";
 				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_OBJC_BRIDGING_HEADER = "Videoanalysis-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
 				VALID_ARCHS = "armv7 arm64";
 			};
@@ -543,6 +586,7 @@
 			baseConfigurationReference = 606BD8CC968C7261F2CCEB20 /* Pods-Videoanalysis.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = XNRZ33ZW7W;
@@ -559,6 +603,8 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.demo1.Videoanalysis;
 				PRODUCT_NAME = "闪电影视大全";
 				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_OBJC_BRIDGING_HEADER = "Videoanalysis-Bridging-Header.h";
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
 				VALID_ARCHS = "armv7 arm64";
 			};

@@ -15,7 +15,7 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "D4389D37A4D49E5FC6B4A7FC985FFFE1"
-               BuildableName = "libJKCategories.a"
+               BuildableName = "JKCategories.framework"
                BlueprintName = "JKCategories"
                ReferencedContainer = "container:Pods.xcodeproj">
             </BuildableReference>

@@ -44,6 +44,13 @@
 			<key>isShown</key>
 			<false/>
 			<key>orderHint</key>
+			<integer>6</integer>
+		</dict>
+		<key>Masonry.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+			<key>orderHint</key>
 			<integer>5</integer>
 		</dict>
 		<key>Pods-Videoanalysis.xcscheme</key>
@@ -51,16 +58,9 @@
 			<key>isShown</key>
 			<false/>
 			<key>orderHint</key>
-			<integer>6</integer>
-		</dict>
-		<key>QMUIKit.xcscheme</key>
-		<dict>
-			<key>isShown</key>
-			<false/>
-			<key>orderHint</key>
 			<integer>7</integer>
 		</dict>
-		<key>Yoga.xcscheme</key>
+		<key>QMUIKit.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>

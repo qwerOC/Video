@@ -17,7 +17,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.popGestureEnable = YES;
-    self.view.backgroundColor =UIColorWhite ;
+    self.view.backgroundColor =[UIColor whiteColor] ;
     [self setNeedsStatusBarAppearanceUpdate];
     if (@available(iOS 11.0, *)) {
         [UIScrollView appearance].contentInsetAdjustmentBehavior = UIScrollViewContentInsetAdjustmentNever;
@@ -31,7 +31,7 @@
 
 -(BOOL)prefersStatusBarHidden{
     return NO;
-} 
+}
 - (void)setPopGestureEnable:(BOOL)popGestureEnable{
     if (!popGestureEnable) {
         id traget = self.navigationController.interactivePopGestureRecognizer.delegate;
@@ -126,9 +126,13 @@
                                            action:@selector(returnClick)];
 }
 
-
-
-
+-(void)creatRightBtnOfCustomWithImage:(NSString *)imageName
+{
+  self.navigationItem.rightBarButtonItem= [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:imageName]
+                                            style:UIBarButtonItemStylePlain
+                                           target:self
+                                            action:@selector(rigthBtnClcik)];
+}
 - (void)rightBtnClcik{
     
 }
@@ -164,7 +168,53 @@
         }];
     }
 }
+- (void)       showNoDataViewToView:(UIView*)superview withString:(NSString*)string{
+    UIView *emptyView=[superview viewWithTag:456789];
+    if (emptyView) {
+        [emptyView removeFromSuperview];
+    }
+    
+    UIView *createView=[[UIView alloc] initWithFrame:CGRectMake(0, 0, CGRectGetWidth(superview.frame), CGRectGetHeight(superview.frame))];
+    createView.tag=456789;
+    [superview addSubview:createView];
+    [superview bringSubviewToFront:createView];
+    UILabel *tipLab=[[UILabel alloc] initWithFrame:CGRectZero];
+    tipLab.text=string;
+    tipLab.textColor=[UIColor colorWithRed:145/255.0 green:145/255.0 blue:145/255.0 alpha:1];
+    tipLab.textAlignment=NSTextAlignmentCenter;
+    tipLab.font=[UIFont systemFontOfSize:24];
+    [createView addSubview:tipLab];
+    UIButton *tipBtn=[UIButton buttonWithType:UIButtonTypeCustom];
+    [tipBtn addTarget:self action:@selector(clickTipBtn) forControlEvents:UIControlEventTouchUpInside];
+    [tipBtn setTitle:@"点击添加" forState:UIControlStateNormal];
+    [tipBtn setTitleColor:[UIColor blueColor] forState:UIControlStateNormal];
+    [createView addSubview:tipBtn];
+    [tipLab mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.left.mas_equalTo(20);
+        make.right.mas_equalTo(-20);
+        make.centerY.mas_equalTo(createView);
+    }];
+    [tipBtn mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.top.mas_equalTo(tipLab.mas_bottom).offset(5);
+        make.left.mas_equalTo(20);
+        make.right.mas_equalTo(-20);
+        make.height.mas_equalTo(30);
+    }];
+}
+-(void)clickTipBtn{
+    if (self.clikEmptyView) {
+        self.clikEmptyView();
+    }
+}
 
+
+
+-(void)hideNoDataViewFromView:(UIView *)superview{
+    UIView *emptyView=[superview viewWithTag:456789];
+      if (emptyView) {
+          [emptyView removeFromSuperview];
+      }
+}
 - (NSMutableDictionary *)dataDict{
     if (!_dataDict) {
         _dataDict = [NSMutableDictionary dictionary];

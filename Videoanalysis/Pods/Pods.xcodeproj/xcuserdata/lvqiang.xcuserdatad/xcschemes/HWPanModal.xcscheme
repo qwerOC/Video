@@ -15,7 +15,7 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "31DCABABCA873FBA7A92FEB47D71ED8E"
-               BuildableName = "libHWPanModal.a"
+               BuildableName = "HWPanModal.framework"
                BlueprintName = "HWPanModal"
                ReferencedContainer = "container:Pods.xcodeproj">
             </BuildableReference>

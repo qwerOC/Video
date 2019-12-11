@@ -11,6 +11,8 @@
 #import "NGConsultingDetailViewController.h"
 #import "HostPopVC.h"
 #import "HostMineVC.h"
+#import "HostDBManager.h"
+#import "HostDBModel.h"
 @interface HostVideoVC ()<UITableViewDelegate,UITableViewDataSource>
 @property(nonatomic, strong)  UITableView *listTable;
 @end
@@ -36,15 +38,36 @@
     _listTable.separatorStyle=UITableViewCellSeparatorStyleNone;
     [_listTable registerNib:[UINib nibWithNibName:@"HostVideoCell" bundle:nil] forCellReuseIdentifier:@"HostVideoCell"];
     [self.view addSubview:_listTable];
-    self.dataArray=[[NSMutableArray alloc] initWithArray:@[@{@"name":@"腾讯",@"url":@"https://v.qq.com"},
-                                                           @{@"name":@"爱奇艺",@"url":@"https://www.iqiyi.com"}]];
+//    self.dataArray=[[NSMutableArray alloc] initWithArray:@[@{@"name":@"腾讯",@"url":@"https://v.qq.com"},
+//                                                           @{@"name":@"爱奇艺",@"url":@"https://www.iqiyi.com"}]];
+    [self creatRightBtnOfCustomWithImage:@"add"];
+         __weak typeof(self) weakSelf = self;
+       self.clikEmptyView = ^{
+           [weakSelf addData];
+       };
+    [self getData];
 }
-
+-(void)rigthBtnClcik{
+    [self addData];
+}
+-(void)getData{
+    self.dataArray=[NSMutableArray array];
+    [[HostDBManager managerDB] createDBTable:@DBVideo];
+    self.dataArray=[[HostDBManager managerDB] selectDBTable:@DBVideo];
+    if (self.dataArray.count==0) {
+        [self showNoDataViewToView:_listTable withString:@"暂无书签"];
+    }
+      __weak typeof(self) weakSelf = self;
+    dispatch_async(dispatch_get_main_queue(), ^{
+        [weakSelf.listTable reloadData];
+    });
+}
 
 - (nonnull UITableViewCell *)tableView:(nonnull UITableView *)tableView cellForRowAtIndexPath:(nonnull NSIndexPath *)indexPath {
     HostVideoCell *cell=[tableView dequeueReusableCellWithIdentifier:@"HostVideoCell" forIndexPath:indexPath];
-    cell.titleLab.text= self.dataArray[indexPath.section][@"name"];
-    cell.detailLab.text= self.dataArray[indexPath.section][@"url"];
+    HostDBModel *model=self.dataArray[indexPath.row];
+    cell.titleLab.text= model.name;
+    cell.detailLab.text= model.url;
     return cell;
 }
 -(NSInteger)numberOfSectionsInTableView:(UITableView *)tableView{
@@ -56,7 +79,8 @@
 
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
     NGConsultingDetailViewController *detail=[[NGConsultingDetailViewController alloc] init];
-    detail.url=self.dataArray[indexPath.section][@"url"];
+    HostDBModel *model=self.dataArray[indexPath.row];
+    detail.url=model.url;
     [self.navigationController pushViewController:detail animated:YES];
 }
 -(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
@@ -71,6 +95,65 @@
 }
 -(CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section{
     return 0.001;
+}
+-(void)addData{
+      __weak typeof(self) weakSelf = self;
+    UIAlertController *alc=[UIAlertController alertControllerWithTitle:@"添加解析地址"
+                                                               message:@"不需要输入http://"
+                                                        preferredStyle:UIAlertControllerStyleAlert];
+    [alc addTextFieldWithConfigurationHandler:^(UITextField * _Nonnull textField) {
+        textField.placeholder=@"请输入书签名称";
+    }];
+    [alc addTextFieldWithConfigurationHandler:^(UITextField * _Nonnull textField) {
+           textField.placeholder=@"请输入书签地址";
+    }];
+    UIAlertAction *cancaleBtn=[UIAlertAction actionWithTitle:@"取消"
+                                                       style:UIAlertActionStyleCancel
+                                                     handler:^(UIAlertAction * _Nonnull action) {
+        
+    }];
+    UIAlertAction *okBtn=[UIAlertAction actionWithTitle:@"确定"
+                                                       style:UIAlertActionStyleDefault
+                                                     handler:^(UIAlertAction * _Nonnull action) {
+        UITextField *tfFirst=alc.textFields.firstObject;
+        UITextField *tfLast=alc.textFields.lastObject;
+        if ([HostsTools isBlankString:tfFirst.text]&&[HostsTools isBlankString:tfLast.text]) {
+            
+        }
+        HostDBModel *model=[[HostDBModel alloc] init];
+        model.name=tfFirst.text;
+        model.url=[NSString stringWithFormat:@"http://%@",tfLast.text];
+        [[HostDBManager managerDB] createDBTable:@DBVideo];
+        [[HostDBManager managerDB] insertDBTable:@DBVideo withSearch:model];
+         self.dataArray=[[HostDBManager managerDB] selectDBTable:@DBVideo];
+        dispatch_async(dispatch_get_main_queue(), ^{
+            [weakSelf.listTable reloadData];
+            if (weakSelf.dataArray.count>0) {
+                      [weakSelf hideNoDataViewFromView:weakSelf.listTable];
+                  }
+        });
+    }];
+    [alc addAction:cancaleBtn];
+    [alc addAction:okBtn];
+    [self presentViewController:alc animated:YES completion:nil];
+}
+- (NSString *)tableView:(UITableView *)tableView titleForDeleteConfirmationButtonForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    return @"删除";
+}
+- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    HostDBModel *model=self.dataArray[indexPath.row];
+    [[HostDBManager managerDB] createDBTable:@DBVideo];
+    [[HostDBManager managerDB] delDBTable:@DBVideo withSearch:model];
+     self.dataArray=[[HostDBManager managerDB] selectDBTable:@DBVideo];
+      __weak typeof(self) weakSelf = self;
+    dispatch_async(dispatch_get_main_queue(), ^{
+        [tableView reloadData];
+        if (weakSelf.dataArray.count==0) {
+             [weakSelf showNoDataViewToView:weakSelf.listTable withString:@"暂无书签"];
+         }
+    });
 }
 @end
 

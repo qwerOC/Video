@@ -15,7 +15,7 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "740124B3EE5D14F0E8AF4C9163C297A8"
-               BuildableName = "libQMUIKit.a"
+               BuildableName = "QMUIKit.framework"
                BlueprintName = "QMUIKit"
                ReferencedContainer = "container:Pods.xcodeproj">
             </BuildableReference>

@@ -162,6 +162,7 @@ PODS:
   - JKCategories/UIKit/UIWebView (1.8.2):
     - JKCategories/UIKit/UIColor
   - JKCategories/UIKit/UIWindow (1.8.2)
+  - Masonry (1.1.0)
   - MBProgressHUD (1.1.0)
   - QMUIKit (4.0.2):
     - QMUIKit/QMUIComponents (= 4.0.2)
@@ -459,7 +460,6 @@ PODS:
     - QMUIKit/QMUILog
   - QMUIKit/QMUIResources (4.0.2)
   - QMUIKit/QMUIWeakObjectContainer (4.0.2)
-  - Yoga (1.7.0)
 
 DEPENDENCIES:
   - AFNetworking
@@ -467,9 +467,9 @@ DEPENDENCIES:
   - HWPanModal (~> 0.6.0)
   - IQKeyboardManager (~> 6.3.0)
   - JKCategories (~> 1.8.2)
+  - Masonry
   - MBProgressHUD
   - QMUIKit
-  - Yoga (from `https://github.com/facebook/yoga`, tag `1.7.0`)
 
 SPEC REPOS:
   https://github.com/CocoaPods/Specs.git:
@@ -478,18 +478,9 @@ SPEC REPOS:
     - HWPanModal
     - IQKeyboardManager
     - JKCategories
+    - Masonry
     - MBProgressHUD
     - QMUIKit
-
-EXTERNAL SOURCES:
-  Yoga:
-    :git: https://github.com/facebook/yoga
-    :tag: 1.7.0
-
-CHECKOUT OPTIONS:
-  Yoga:
-    :git: https://github.com/facebook/yoga
-    :tag: 1.7.0
 
 SPEC CHECKSUMS:
   AFNetworking: b6f891fdfaed196b46c7a83cf209e09697b94057
@@ -497,10 +488,10 @@ SPEC CHECKSUMS:
   HWPanModal: b5f2a7df8eab0070f13bb93f587f1c64b87afabb
   IQKeyboardManager: 2ca9d64893247556f53523dcd8d78641f0ba7c23
   JKCategories: 9dcef0d8be9ff22fdfebd86b83711ff11cd109dd
+  Masonry: 678fab65091a9290e40e2832a55e7ab731aad201
   MBProgressHUD: e7baa36a220447d8aeb12769bf0585582f3866d9
   QMUIKit: 4914306e357359d79a118557cc34513dfb3b12ab
-  Yoga: 983d0c15b9676d5beeea25103fd5673fd481b123
 
-PODFILE CHECKSUM: 01fdba577facd926544b5a12aa7d95cd7938e9e6
+PODFILE CHECKSUM: 4417e1d6220dedca3a8437e85ede74babadc3a5c
 
 COCOAPODS: 1.8.4

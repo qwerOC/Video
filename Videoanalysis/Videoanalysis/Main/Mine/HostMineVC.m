@@ -56,6 +56,7 @@
     HostBaseViewController *vc =  [[NSClassFromString(self.dataArray[indexPath.row][@"path"]) alloc] init];
     [self.navigationController pushViewController:vc animated:YES];
 }
+
 /*
  #pragma mark - Navigation
  
