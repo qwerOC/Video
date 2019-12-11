@@ -116,7 +116,7 @@
         }
         HostDBModel *model=[[HostDBModel alloc] init];
         model.name=tfFirst.text;
-        model.url=tfLast.text]
+        model.url=tfLast.text;
         [[HostDBManager managerDB] createDBTable:@DBAnalysis];
         [[HostDBManager managerDB] insertDBTable:@DBAnalysis withSearch:model];
          self.dataArray=[[HostDBManager managerDB] selectDBTable:@DBAnalysis];
@@ -132,13 +132,13 @@
     [self presentViewController:alc animated:YES completion:nil];
 }
 -(void)updateWith:(HostDBModel*)model{
-    __weak typeof(self) weakSelf = self;
+    __weak typeof(self) weakSelf  = self;
      UIAlertController *alc=[UIAlertController alertControllerWithTitle:@"添加解析地址"
                                                                 message:nil
                                                          preferredStyle:UIAlertControllerStyleAlert];
      [alc addTextFieldWithConfigurationHandler:^(UITextField * _Nonnull textField) {
          textField.placeholder=@"请输入解析标记";
-         textField.text=model.name;
+         textField.placeholder=model.name;
      }];
      [alc addTextFieldWithConfigurationHandler:^(UITextField * _Nonnull textField) {
          textField.placeholder=@"请输入解析地址";

@@ -65,7 +65,7 @@
 
 - (nonnull UITableViewCell *)tableView:(nonnull UITableView *)tableView cellForRowAtIndexPath:(nonnull NSIndexPath *)indexPath {
     HostVideoCell *cell=[tableView dequeueReusableCellWithIdentifier:@"HostVideoCell" forIndexPath:indexPath];
-    HostDBModel *model=self.dataArray[indexPath.row];
+    HostDBModel *model=self.dataArray[indexPath.section];
     cell.titleLab.text= model.name;
     cell.detailLab.text= model.url;
     return cell;
@@ -79,7 +79,7 @@
 
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
     NGConsultingDetailViewController *detail=[[NGConsultingDetailViewController alloc] init];
-    HostDBModel *model=self.dataArray[indexPath.row];
+    HostDBModel *model=self.dataArray[indexPath.section];
     detail.url=model.url;
     [self.navigationController pushViewController:detail animated:YES];
 }
@@ -123,7 +123,7 @@
         }
         HostDBModel *model=[[HostDBModel alloc] init];
         model.name=tfFirst.text;
-        model.url=tfLast.text
+        model.url=tfLast.text;
         [[HostDBManager managerDB] createDBTable:@DBVideo];
         [[HostDBManager managerDB] insertDBTable:@DBVideo withSearch:model];
          self.dataArray=[[HostDBManager managerDB] selectDBTable:@DBVideo];
@@ -138,23 +138,86 @@
     [alc addAction:okBtn];
     [self presentViewController:alc animated:YES completion:nil];
 }
-- (NSString *)tableView:(UITableView *)tableView titleForDeleteConfirmationButtonForRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    return @"删除";
+-(BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath{
+    return YES;
+}
+
+//设置返回存放侧滑按钮数组
+-(NSArray<UITableViewRowAction *> *)tableView:(UITableView *)tableView editActionsForRowAtIndexPath:(NSIndexPath *)indexPath{
+    __weak typeof(self) weakSelf = self;
+  //这是iOS8以后的方法
+    UITableViewRowAction *deleBtn = [UITableViewRowAction rowActionWithStyle:UITableViewRowActionStyleDestructive title:@"删除" handler:^(UITableViewRowAction * _Nonnull action, NSIndexPath * _Nonnull indexPath) {
+        HostDBModel *model=weakSelf.dataArray[indexPath.section];
+           [[HostDBManager managerDB] createDBTable:@DBVideo];
+           [[HostDBManager managerDB] delDBTable:@DBVideo withSearch:model];
+            self.dataArray=[[HostDBManager managerDB] selectDBTable:@DBVideo];
+           dispatch_async(dispatch_get_main_queue(), ^{
+               [tableView reloadData];
+               if (weakSelf.dataArray.count==0) {
+                    [weakSelf showNoDataViewToView:weakSelf.listTable withString:@"暂无书签"];
+                }
+           });
+    }];
+    
+    
+    UITableViewRowAction *moreBtn = [UITableViewRowAction  rowActionWithStyle:UITableViewRowActionStyleDestructive title:@"编辑" handler:^(UITableViewRowAction * _Nonnull action, NSIndexPath * _Nonnull indexPath) {
+       HostDBModel *model=weakSelf.dataArray[indexPath.section];
+
+        [weakSelf updateWith:model];
+        
+    }];
+    
+    //设置背景颜色，他们的大小会分局文字内容自适应，所以不用担心
+    deleBtn.backgroundColor = [UIColor redColor];
+    
+    moreBtn.backgroundColor = [UIColor orangeColor];
+    
+    return @[deleBtn,moreBtn];
+    
+}
+-(void)updateWith:(HostDBModel*)model{
+    __weak typeof(self) weakSelf  = self;
+     UIAlertController *alc=[UIAlertController alertControllerWithTitle:@"编辑书签"
+                                                                message:nil
+                                                         preferredStyle:UIAlertControllerStyleAlert];
+     [alc addTextFieldWithConfigurationHandler:^(UITextField * _Nonnull textField) {
+         textField.placeholder=@"请输入书签";
+         textField.placeholder=model.name;
+     }];
+     [alc addTextFieldWithConfigurationHandler:^(UITextField * _Nonnull textField) {
+         textField.placeholder=@"请输入书签地址";
+         textField.placeholder=model.url;
+     }];
+     UIAlertAction *cancaleBtn=[UIAlertAction actionWithTitle:@"取消"
+                                                        style:UIAlertActionStyleCancel
+                                                      handler:^(UIAlertAction * _Nonnull action) {
+         
+     }];
+     UIAlertAction *okBtn=[UIAlertAction actionWithTitle:@"确定"
+                                                        style:UIAlertActionStyleDefault
+                                                      handler:^(UIAlertAction * _Nonnull action) {
+         UITextField *tfFirst=alc.textFields.firstObject;
+         UITextField *tfLast=alc.textFields.lastObject;
+         if ([HostsTools isBlankString:tfFirst.text]&&[HostsTools isBlankString:tfLast.text]) {
+             
+         }
+         model.name=tfFirst.text;
+         model.url=tfLast.text;
+         [[HostDBManager managerDB] createDBTable:@DBVideo];
+         [[HostDBManager managerDB] updateDBTable:@DBVideo withSearch:model];
+          self.dataArray=[[HostDBManager managerDB] selectDBTable:@DBVideo];
+         dispatch_async(dispatch_get_main_queue(), ^{
+             [weakSelf.listTable reloadData];
+   
+         });
+     }];
+     [alc addAction:cancaleBtn];
+     [alc addAction:okBtn];
+     [self presentViewController:alc animated:YES completion:nil];
 }
 - (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    HostDBModel *model=self.dataArray[indexPath.row];
-    [[HostDBManager managerDB] createDBTable:@DBVideo];
-    [[HostDBManager managerDB] delDBTable:@DBVideo withSearch:model];
-     self.dataArray=[[HostDBManager managerDB] selectDBTable:@DBVideo];
-      __weak typeof(self) weakSelf = self;
-    dispatch_async(dispatch_get_main_queue(), ^{
-        [tableView reloadData];
-        if (weakSelf.dataArray.count==0) {
-             [weakSelf showNoDataViewToView:weakSelf.listTable withString:@"暂无书签"];
-         }
-    });
+   
 }
 @end
 

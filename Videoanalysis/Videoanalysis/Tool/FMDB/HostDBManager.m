@@ -98,7 +98,7 @@ static HostDBManager *dbmanager;
 /// @param dbName 数据库名称
 /// @param model 数据模型
 -(void)updateDBTable:(NSString*)dbName withSearch:(HostDBModel*)model{
-    NSString*sqlStr = [NSString stringWithFormat:@"UPDATE %@ SET name = '%@' url = '%@'  WHERE id = '%ld'",dbName,model.name,model.url,(long)model.ID];
+    NSString*sqlStr = [NSString stringWithFormat:@"UPDATE %@ SET name = '%@', url = '%@'  WHERE ID = '%ld'",dbName,model.name,model.url,model.ID];
     [queue inTransaction:^(FMDatabase * _Nonnull db, BOOL * _Nonnull rollback) {
         BOOL flag = [db executeUpdate:sqlStr];
         if (flag) {
