@@ -98,7 +98,7 @@
 }
 -(void)addData{
       __weak typeof(self) weakSelf = self;
-    UIAlertController *alc=[UIAlertController alertControllerWithTitle:@"添加解析地址"
+    UIAlertController *alc=[UIAlertController alertControllerWithTitle:@"添加书签"
                                                                message:nil
                                                         preferredStyle:UIAlertControllerStyleAlert];
     [alc addTextFieldWithConfigurationHandler:^(UITextField * _Nonnull textField) {
