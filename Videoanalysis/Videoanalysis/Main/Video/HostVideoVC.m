@@ -99,13 +99,14 @@
 -(void)addData{
       __weak typeof(self) weakSelf = self;
     UIAlertController *alc=[UIAlertController alertControllerWithTitle:@"添加解析地址"
-                                                               message:@"不需要输入http://"
+                                                               message:nil
                                                         preferredStyle:UIAlertControllerStyleAlert];
     [alc addTextFieldWithConfigurationHandler:^(UITextField * _Nonnull textField) {
         textField.placeholder=@"请输入书签名称";
     }];
     [alc addTextFieldWithConfigurationHandler:^(UITextField * _Nonnull textField) {
            textField.placeholder=@"请输入书签地址";
+         textField.text=@"http://";
     }];
     UIAlertAction *cancaleBtn=[UIAlertAction actionWithTitle:@"取消"
                                                        style:UIAlertActionStyleCancel
@@ -122,7 +123,7 @@
         }
         HostDBModel *model=[[HostDBModel alloc] init];
         model.name=tfFirst.text;
-        model.url=[NSString stringWithFormat:@"http://%@",tfLast.text];
+        model.url=tfLast.text
         [[HostDBManager managerDB] createDBTable:@DBVideo];
         [[HostDBManager managerDB] insertDBTable:@DBVideo withSearch:model];
          self.dataArray=[[HostDBManager managerDB] selectDBTable:@DBVideo];
