@@ -20,7 +20,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    self.navigationItem.title=@"我的";
+    self.navigationItem.title=@"解析地址管理";
     _mintable = [[UITableView alloc] initWithFrame:CGRectMake(0, 0, MuScreen_Width, MuScreen_Height-SafeAreaTopHeight-SafeAreaBottomHeight-NGTabBarHeight)
                                              style:UITableViewStyleGrouped];
     _mintable.delegate=self;
@@ -92,7 +92,7 @@
 -(void)addData{
       __weak typeof(self) weakSelf = self;
     UIAlertController *alc=[UIAlertController alertControllerWithTitle:@"添加解析地址"
-                                                               message:nil
+                                                               message:@"不需要输入http://"
                                                         preferredStyle:UIAlertControllerStyleAlert];
     [alc addTextFieldWithConfigurationHandler:^(UITextField * _Nonnull textField) {
         textField.placeholder=@"请输入解析标记";
@@ -115,7 +115,7 @@
         }
         HostDBModel *model=[[HostDBModel alloc] init];
         model.name=tfFirst.text;
-        model.url=tfLast.text;
+        model.url=[NSString stringWithFormat:@"http://%@",tfLast.text];
         [[HostDBManager managerDB] createDBTable:@DBAnalysis];
         [[HostDBManager managerDB] insertDBTable:@DBAnalysis withSearch:model];
          self.dataArray=[[HostDBManager managerDB] selectDBTable:@DBAnalysis];
