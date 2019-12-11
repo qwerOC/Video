@@ -169,9 +169,7 @@
     
     //设置背景颜色，他们的大小会分局文字内容自适应，所以不用担心
     deleBtn.backgroundColor = [UIColor redColor];
-    
     moreBtn.backgroundColor = [UIColor orangeColor];
-    
     return @[deleBtn,moreBtn];
     
 }
@@ -182,11 +180,11 @@
                                                          preferredStyle:UIAlertControllerStyleAlert];
      [alc addTextFieldWithConfigurationHandler:^(UITextField * _Nonnull textField) {
          textField.placeholder=@"请输入书签";
-         textField.placeholder=model.name;
+         textField.text=model.name;
      }];
      [alc addTextFieldWithConfigurationHandler:^(UITextField * _Nonnull textField) {
          textField.placeholder=@"请输入书签地址";
-         textField.placeholder=model.url;
+         textField.text=model.url;
      }];
      UIAlertAction *cancaleBtn=[UIAlertAction actionWithTitle:@"取消"
                                                         style:UIAlertActionStyleCancel

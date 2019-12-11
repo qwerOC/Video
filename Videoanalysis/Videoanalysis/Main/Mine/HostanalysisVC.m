@@ -138,11 +138,11 @@
                                                          preferredStyle:UIAlertControllerStyleAlert];
      [alc addTextFieldWithConfigurationHandler:^(UITextField * _Nonnull textField) {
          textField.placeholder=@"请输入解析标记";
-         textField.placeholder=model.name;
+         textField.text=model.name;
      }];
      [alc addTextFieldWithConfigurationHandler:^(UITextField * _Nonnull textField) {
          textField.placeholder=@"请输入解析地址";
-         textField.placeholder=model.url;
+         textField.text=model.url;
      }];
      UIAlertAction *cancaleBtn=[UIAlertAction actionWithTitle:@"取消"
                                                         style:UIAlertActionStyleCancel
