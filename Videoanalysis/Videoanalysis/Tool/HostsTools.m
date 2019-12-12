@@ -7,7 +7,7 @@
 //
 
 #import "HostsTools.h"
-
+#import <AVKit/AVKit.h>
 @implementation HostsTools
 + (BOOL)isBlankString:(NSString *)string{
     if (![string isKindOfClass:[NSString class]]) {
@@ -24,4 +24,17 @@
     }
     return NO;
 }
++ (NSString*)getVideoTimeByUrlString:(NSString*)urlString{
+
+    NSURL* url = [NSURL URLWithString:urlString];
+    AVPlayerItem *songItem = [[AVPlayerItem alloc] initWithURL:url];
+    CMTime durationV =   songItem.asset.duration;
+    NSUInteger dTotalSeconds = CMTimeGetSeconds(durationV);
+    NSUInteger dHours = floor(dTotalSeconds / 3600);
+    NSUInteger dMinutes = floor(dTotalSeconds % 3600 / 60);
+    NSUInteger dSeconds = floor(dTotalSeconds % 3600 % 60);
+    NSString *videoDurationText = [NSString stringWithFormat:@"%i:%02i:%02i",dHours, dMinutes, dSeconds];
+    return  videoDurationText;
+}
+
 @end

@@ -164,6 +164,7 @@ PODS:
   - JKCategories/UIKit/UIWindow (1.8.2)
   - Masonry (1.1.0)
   - MBProgressHUD (1.1.0)
+  - MMLayout (0.2.0)
   - QMUIKit (4.0.2):
     - QMUIKit/QMUIComponents (= 4.0.2)
     - QMUIKit/QMUICore (= 4.0.2)
@@ -460,6 +461,20 @@ PODS:
     - QMUIKit/QMUILog
   - QMUIKit/QMUIResources (4.0.2)
   - QMUIKit/QMUIWeakObjectContainer (4.0.2)
+  - SDWebImage (5.2.5):
+    - SDWebImage/Core (= 5.2.5)
+  - SDWebImage/Core (5.2.5)
+  - SuperPlayer (3.1.2):
+    - AFNetworking
+    - Masonry
+    - MMLayout
+    - SDWebImage
+    - SuperPlayer/Player (= 3.1.2)
+  - SuperPlayer/Player (3.1.2):
+    - AFNetworking
+    - Masonry
+    - MMLayout
+    - SDWebImage
 
 DEPENDENCIES:
   - AFNetworking
@@ -470,6 +485,7 @@ DEPENDENCIES:
   - Masonry
   - MBProgressHUD
   - QMUIKit
+  - SuperPlayer
 
 SPEC REPOS:
   https://github.com/CocoaPods/Specs.git:
@@ -480,7 +496,10 @@ SPEC REPOS:
     - JKCategories
     - Masonry
     - MBProgressHUD
+    - MMLayout
     - QMUIKit
+    - SDWebImage
+    - SuperPlayer
 
 SPEC CHECKSUMS:
   AFNetworking: b6f891fdfaed196b46c7a83cf209e09697b94057
@@ -490,8 +509,11 @@ SPEC CHECKSUMS:
   JKCategories: 9dcef0d8be9ff22fdfebd86b83711ff11cd109dd
   Masonry: 678fab65091a9290e40e2832a55e7ab731aad201
   MBProgressHUD: e7baa36a220447d8aeb12769bf0585582f3866d9
+  MMLayout: 3fb59d58eeb8656c64e61d550fb0088e10666c11
   QMUIKit: 4914306e357359d79a118557cc34513dfb3b12ab
+  SDWebImage: 4eabf2fa6695c95c47724214417a9c036c965e4a
+  SuperPlayer: de396e0de3d138f66d644e4dcc3f8d63e310523d
 
-PODFILE CHECKSUM: 4417e1d6220dedca3a8437e85ede74babadc3a5c
+PODFILE CHECKSUM: 3efbd9f364d687a11cf8d27f8ba4c232d8dc45ef
 
 COCOAPODS: 1.8.4

@@ -26,6 +26,9 @@
 #import "HostBaseWebViewController.h"
 #import "HWPanModal.h"
 #import <QMUIKit/QMUIKit.h>
+#import <AFNetworking.h>
+#import "HostRequestManager.h"
+#import "HostConcurrentManager.h"
 #define MAS_SHORTHAND
 #define MAS_SHORTHAND_GLOBALS
 #import <Masonry.h>

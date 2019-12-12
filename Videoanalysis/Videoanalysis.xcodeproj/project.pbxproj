@@ -9,6 +9,9 @@
 /* Begin PBXBuildFile section */
 		14E404ECA9E5430C7D0C0991 /* Pods_Videoanalysis.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9F5351FF2ED02C60A80B5ABB /* Pods_Videoanalysis.framework */; };
 		761E3ACD23A098010059CB93 /* HostsTools.m in Sources */ = {isa = PBXBuildFile; fileRef = 761E3ACC23A098010059CB93 /* HostsTools.m */; };
+		761E3AD123A21D230059CB93 /* HostConcurrentManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 761E3AD023A21D230059CB93 /* HostConcurrentManager.m */; };
+		761E3AD423A22CDF0059CB93 /* HostRequestManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 761E3AD323A22CDF0059CB93 /* HostRequestManager.m */; };
+		761E3AD723A261320059CB93 /* HostplayViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 761E3AD623A261320059CB93 /* HostplayViewController.m */; };
 		764E611A2390F99F000E41E2 /* HostTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 764E61192390F99F000E41E2 /* HostTableViewCell.m */; };
 		764E611E2390F9C8000E41E2 /* HostVideoCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 764E611C2390F9C8000E41E2 /* HostVideoCell.m */; };
 		764E611F2390F9C8000E41E2 /* HostVideoCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 764E611D2390F9C8000E41E2 /* HostVideoCell.xib */; };
@@ -44,6 +47,12 @@
 		606BD8CC968C7261F2CCEB20 /* Pods-Videoanalysis.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Videoanalysis.release.xcconfig"; path = "Target Support Files/Pods-Videoanalysis/Pods-Videoanalysis.release.xcconfig"; sourceTree = "<group>"; };
 		761E3ACB23A098010059CB93 /* HostsTools.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HostsTools.h; sourceTree = "<group>"; };
 		761E3ACC23A098010059CB93 /* HostsTools.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HostsTools.m; sourceTree = "<group>"; };
+		761E3ACF23A21D230059CB93 /* HostConcurrentManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HostConcurrentManager.h; sourceTree = "<group>"; };
+		761E3AD023A21D230059CB93 /* HostConcurrentManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HostConcurrentManager.m; sourceTree = "<group>"; };
+		761E3AD223A22CDF0059CB93 /* HostRequestManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HostRequestManager.h; sourceTree = "<group>"; };
+		761E3AD323A22CDF0059CB93 /* HostRequestManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HostRequestManager.m; sourceTree = "<group>"; };
+		761E3AD523A261320059CB93 /* HostplayViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HostplayViewController.h; sourceTree = "<group>"; };
+		761E3AD623A261320059CB93 /* HostplayViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HostplayViewController.m; sourceTree = "<group>"; };
 		764E61182390F99F000E41E2 /* HostTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HostTableViewCell.h; sourceTree = "<group>"; };
 		764E61192390F99F000E41E2 /* HostTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HostTableViewCell.m; sourceTree = "<group>"; };
 		764E611B2390F9C8000E41E2 /* HostVideoCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HostVideoCell.h; sourceTree = "<group>"; };
@@ -130,6 +139,17 @@
 			path = Pods;
 			sourceTree = "<group>";
 		};
+		761E3ACE23A21CB90059CB93 /* Manager */ = {
+			isa = PBXGroup;
+			children = (
+				761E3ACF23A21D230059CB93 /* HostConcurrentManager.h */,
+				761E3AD023A21D230059CB93 /* HostConcurrentManager.m */,
+				761E3AD223A22CDF0059CB93 /* HostRequestManager.h */,
+				761E3AD323A22CDF0059CB93 /* HostRequestManager.m */,
+			);
+			path = Manager;
+			sourceTree = "<group>";
+		};
 		764E6120239141BF000E41E2 /* play */ = {
 			isa = PBXGroup;
 			children = (
@@ -137,6 +157,8 @@
 				764E6121239141CA000E41E2 /* NGConsultingDetailViewController.m */,
 				764E6122239141CA000E41E2 /* PlayViewController.h */,
 				764E6124239141CB000E41E2 /* PlayViewController.m */,
+				761E3AD523A261320059CB93 /* HostplayViewController.h */,
+				761E3AD623A261320059CB93 /* HostplayViewController.m */,
 			);
 			path = play;
 			sourceTree = "<group>";
@@ -224,6 +246,7 @@
 		7651A969238BA8EE00574813 /* Tool */ = {
 			isa = PBXGroup;
 			children = (
+				761E3ACE23A21CB90059CB93 /* Manager */,
 				76C4A7B3239F37AD00A0F5F3 /* FMDB */,
 				761E3ACB23A098010059CB93 /* HostsTools.h */,
 				761E3ACC23A098010059CB93 /* HostsTools.m */,
@@ -286,6 +309,7 @@
 				7651A921238BA00500574813 /* Frameworks */,
 				7651A922238BA00500574813 /* Resources */,
 				FF8AE4DA75F0FB48CC3100A8 /* [CP] Embed Pods Frameworks */,
+				217FFFB1F63C14017021B949 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -347,6 +371,23 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		217FFFB1F63C14017021B949 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Videoanalysis/Pods-Videoanalysis-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Videoanalysis/Pods-Videoanalysis-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Videoanalysis/Pods-Videoanalysis-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		6494603F2C986C975A3DF2F6 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -399,12 +440,15 @@
 				7651A968238BA7C600574813 /* HostMineVC.m in Sources */,
 				765240EB239F541E00D564B8 /* swiftBridge.swift in Sources */,
 				7651A92F238BA00500574813 /* ViewController.m in Sources */,
+				761E3AD123A21D230059CB93 /* HostConcurrentManager.m in Sources */,
+				761E3AD423A22CDF0059CB93 /* HostRequestManager.m in Sources */,
 				76DE27912390ED4900C5671D /* HostBaseNavigationController.m in Sources */,
 				76C4A7AB239E010C00A0F5F3 /* HWNavViewController.m in Sources */,
 				76C4A7B6239F37CA00A0F5F3 /* HostDBManager.m in Sources */,
 				7651A929238BA00500574813 /* AppDelegate.m in Sources */,
 				76C4A7AE239E1E6C00A0F5F3 /* HostanalysisVC.m in Sources */,
 				76DE278E2390ED4900C5671D /* HostUINavigationController+FDFullscreenPopGesture.m in Sources */,
+				761E3AD723A261320059CB93 /* HostplayViewController.m in Sources */,
 				7651A93A238BA00800574813 /* main.m in Sources */,
 				764E611E2390F9C8000E41E2 /* HostVideoCell.m in Sources */,
 				76C4A7BC239F384F00A0F5F3 /* HostDBModel.m in Sources */,

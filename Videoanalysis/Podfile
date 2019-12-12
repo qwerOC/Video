@@ -6,9 +6,9 @@ target "Videoanalysis" do
  pod 'QMUIKit'
  pod 'HWPanModal', '~> 0.6.0'
  pod 'Masonry'
-
  pod 'FMDB'
  pod 'MBProgressHUD'
  pod 'IQKeyboardManager', '~> 6.3.0'
  pod 'AFNetworking'
+ pod 'SuperPlayer'
 end

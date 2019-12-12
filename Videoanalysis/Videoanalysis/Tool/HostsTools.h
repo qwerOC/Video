@@ -12,6 +12,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface HostsTools : NSObject
 + (BOOL)isBlankString:(NSString *)string;
++ (NSString*)getVideoTimeByUrlString:(NSString*)urlString;
 @end
 
 NS_ASSUME_NONNULL_END

@@ -38,17 +38,18 @@
     _listTable.separatorStyle=UITableViewCellSeparatorStyleNone;
     [_listTable registerNib:[UINib nibWithNibName:@"HostVideoCell" bundle:nil] forCellReuseIdentifier:@"HostVideoCell"];
     [self.view addSubview:_listTable];
-//    self.dataArray=[[NSMutableArray alloc] initWithArray:@[@{@"name":@"腾讯",@"url":@"https://v.qq.com"},
-//                                                           @{@"name":@"爱奇艺",@"url":@"https://www.iqiyi.com"}]];
+    
     [self creatRightBtnOfCustomWithImage:@"add"];
-         __weak typeof(self) weakSelf = self;
-       self.clikEmptyView = ^{
-           [weakSelf addData];
-       };
+    __weak typeof(self) weakSelf = self;
+    self.clikEmptyView = ^{
+        [weakSelf addData];
+    };
     [self getData];
+    NSLog(@"%@",[HostsTools getVideoTimeByUrlString:@"https://iqiyi.cdn9-okzy.com/20191209/3271_380cbd53/index.m3u8"]);
 }
 -(void)rigthBtnClcik{
-    [self addData];
+        [self addData];
+   
 }
 -(void)getData{
     self.dataArray=[NSMutableArray array];
@@ -57,7 +58,7 @@
     if (self.dataArray.count==0) {
         [self showNoDataViewToView:_listTable withString:@"暂无书签"];
     }
-      __weak typeof(self) weakSelf = self;
+    __weak typeof(self) weakSelf = self;
     dispatch_async(dispatch_get_main_queue(), ^{
         [weakSelf.listTable reloadData];
     });
@@ -97,7 +98,7 @@
     return 0.001;
 }
 -(void)addData{
-      __weak typeof(self) weakSelf = self;
+    __weak typeof(self) weakSelf = self;
     UIAlertController *alc=[UIAlertController alertControllerWithTitle:@"添加书签"
                                                                message:nil
                                                         preferredStyle:UIAlertControllerStyleAlert];
@@ -105,8 +106,8 @@
         textField.placeholder=@"请输入书签名称";
     }];
     [alc addTextFieldWithConfigurationHandler:^(UITextField * _Nonnull textField) {
-           textField.placeholder=@"请输入书签地址";
-         textField.text=@"http://";
+        textField.placeholder=@"请输入书签地址";
+        textField.text=@"http://";
     }];
     UIAlertAction *cancaleBtn=[UIAlertAction actionWithTitle:@"取消"
                                                        style:UIAlertActionStyleCancel
@@ -114,8 +115,8 @@
         
     }];
     UIAlertAction *okBtn=[UIAlertAction actionWithTitle:@"确定"
-                                                       style:UIAlertActionStyleDefault
-                                                     handler:^(UIAlertAction * _Nonnull action) {
+                                                  style:UIAlertActionStyleDefault
+                                                handler:^(UIAlertAction * _Nonnull action) {
         UITextField *tfFirst=alc.textFields.firstObject;
         UITextField *tfLast=alc.textFields.lastObject;
         if ([HostsTools isBlankString:tfFirst.text]&&[HostsTools isBlankString:tfLast.text]) {
@@ -126,12 +127,12 @@
         model.url=tfLast.text;
         [[HostDBManager managerDB] createDBTable:@DBVideo];
         [[HostDBManager managerDB] insertDBTable:@DBVideo withSearch:model];
-         self.dataArray=[[HostDBManager managerDB] selectDBTable:@DBVideo];
+        self.dataArray=[[HostDBManager managerDB] selectDBTable:@DBVideo];
         dispatch_async(dispatch_get_main_queue(), ^{
             [weakSelf.listTable reloadData];
             if (weakSelf.dataArray.count>0) {
-                      [weakSelf hideNoDataViewFromView:weakSelf.listTable];
-                  }
+                [weakSelf hideNoDataViewFromView:weakSelf.listTable];
+            }
         });
     }];
     [alc addAction:cancaleBtn];
@@ -145,24 +146,24 @@
 //设置返回存放侧滑按钮数组
 -(NSArray<UITableViewRowAction *> *)tableView:(UITableView *)tableView editActionsForRowAtIndexPath:(NSIndexPath *)indexPath{
     __weak typeof(self) weakSelf = self;
-  //这是iOS8以后的方法
+    //这是iOS8以后的方法
     UITableViewRowAction *deleBtn = [UITableViewRowAction rowActionWithStyle:UITableViewRowActionStyleDestructive title:@"删除" handler:^(UITableViewRowAction * _Nonnull action, NSIndexPath * _Nonnull indexPath) {
         HostDBModel *model=weakSelf.dataArray[indexPath.section];
-           [[HostDBManager managerDB] createDBTable:@DBVideo];
-           [[HostDBManager managerDB] delDBTable:@DBVideo withSearch:model];
-            self.dataArray=[[HostDBManager managerDB] selectDBTable:@DBVideo];
-           dispatch_async(dispatch_get_main_queue(), ^{
-               [tableView reloadData];
-               if (weakSelf.dataArray.count==0) {
-                    [weakSelf showNoDataViewToView:weakSelf.listTable withString:@"暂无书签"];
-                }
-           });
+        [[HostDBManager managerDB] createDBTable:@DBVideo];
+        [[HostDBManager managerDB] delDBTable:@DBVideo withSearch:model];
+        self.dataArray=[[HostDBManager managerDB] selectDBTable:@DBVideo];
+        dispatch_async(dispatch_get_main_queue(), ^{
+            [tableView reloadData];
+            if (weakSelf.dataArray.count==0) {
+                [weakSelf showNoDataViewToView:weakSelf.listTable withString:@"暂无书签"];
+            }
+        });
     }];
     
     
     UITableViewRowAction *moreBtn = [UITableViewRowAction  rowActionWithStyle:UITableViewRowActionStyleDestructive title:@"编辑" handler:^(UITableViewRowAction * _Nonnull action, NSIndexPath * _Nonnull indexPath) {
-       HostDBModel *model=weakSelf.dataArray[indexPath.section];
-
+        HostDBModel *model=weakSelf.dataArray[indexPath.section];
+        
         [weakSelf updateWith:model];
         
     }];
@@ -175,48 +176,42 @@
 }
 -(void)updateWith:(HostDBModel*)model{
     __weak typeof(self) weakSelf  = self;
-     UIAlertController *alc=[UIAlertController alertControllerWithTitle:@"编辑书签"
-                                                                message:nil
-                                                         preferredStyle:UIAlertControllerStyleAlert];
-     [alc addTextFieldWithConfigurationHandler:^(UITextField * _Nonnull textField) {
-         textField.placeholder=@"请输入书签";
-         textField.text=model.name;
-     }];
-     [alc addTextFieldWithConfigurationHandler:^(UITextField * _Nonnull textField) {
-         textField.placeholder=@"请输入书签地址";
-         textField.text=model.url;
-     }];
-     UIAlertAction *cancaleBtn=[UIAlertAction actionWithTitle:@"取消"
-                                                        style:UIAlertActionStyleCancel
-                                                      handler:^(UIAlertAction * _Nonnull action) {
-         
-     }];
-     UIAlertAction *okBtn=[UIAlertAction actionWithTitle:@"确定"
-                                                        style:UIAlertActionStyleDefault
-                                                      handler:^(UIAlertAction * _Nonnull action) {
-         UITextField *tfFirst=alc.textFields.firstObject;
-         UITextField *tfLast=alc.textFields.lastObject;
-         if ([HostsTools isBlankString:tfFirst.text]&&[HostsTools isBlankString:tfLast.text]) {
-             
-         }
-         model.name=tfFirst.text;
-         model.url=tfLast.text;
-         [[HostDBManager managerDB] createDBTable:@DBVideo];
-         [[HostDBManager managerDB] updateDBTable:@DBVideo withSearch:model];
-          self.dataArray=[[HostDBManager managerDB] selectDBTable:@DBVideo];
-         dispatch_async(dispatch_get_main_queue(), ^{
-             [weakSelf.listTable reloadData];
-   
-         });
-     }];
-     [alc addAction:cancaleBtn];
-     [alc addAction:okBtn];
-     [self presentViewController:alc animated:YES completion:nil];
-}
-- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath
-{
-   
+    UIAlertController *alc=[UIAlertController alertControllerWithTitle:@"编辑书签"
+                                                               message:nil
+                                                        preferredStyle:UIAlertControllerStyleAlert];
+    [alc addTextFieldWithConfigurationHandler:^(UITextField * _Nonnull textField) {
+        textField.placeholder=@"请输入书签";
+        textField.text=model.name;
+    }];
+    [alc addTextFieldWithConfigurationHandler:^(UITextField * _Nonnull textField) {
+        textField.placeholder=@"请输入书签地址";
+        textField.text=model.url;
+    }];
+    UIAlertAction *cancaleBtn=[UIAlertAction actionWithTitle:@"取消"
+                                                       style:UIAlertActionStyleCancel
+                                                     handler:^(UIAlertAction * _Nonnull action) {
+        
+    }];
+    UIAlertAction *okBtn=[UIAlertAction actionWithTitle:@"确定"
+                                                  style:UIAlertActionStyleDefault
+                                                handler:^(UIAlertAction * _Nonnull action) {
+        UITextField *tfFirst=alc.textFields.firstObject;
+        UITextField *tfLast=alc.textFields.lastObject;
+        if ([HostsTools isBlankString:tfFirst.text]&&[HostsTools isBlankString:tfLast.text]) {
+            
+        }
+        model.name=tfFirst.text;
+        model.url=tfLast.text;
+        [[HostDBManager managerDB] createDBTable:@DBVideo];
+        [[HostDBManager managerDB] updateDBTable:@DBVideo withSearch:model];
+        self.dataArray=[[HostDBManager managerDB] selectDBTable:@DBVideo];
+        dispatch_async(dispatch_get_main_queue(), ^{
+            [weakSelf.listTable reloadData];
+            
+        });
+    }];
+    [alc addAction:cancaleBtn];
+    [alc addAction:okBtn];
+    [self presentViewController:alc animated:YES completion:nil];
 }
 @end
-
-
