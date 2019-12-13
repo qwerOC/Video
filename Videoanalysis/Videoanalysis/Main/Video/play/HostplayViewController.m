@@ -17,6 +17,9 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    if ([[SuperPlayerWindow sharedInstance] isShowing]) {
+        [[SuperPlayerWindow sharedInstance] hide]; // 悬浮显示
+    }
     _playerView = [[SuperPlayerView alloc] init];
     // 设置代理，用于接受事件
     _playerView.delegate = self;
@@ -35,12 +38,11 @@
 }
 -(void)viewWillAppear:(BOOL)animated{
     [super viewWillAppear:animated];
-   
 }
 -(void)viewDidDisappear:(BOOL)animated{
     [super viewDidDisappear:animated];
 
-    [SuperPlayerWindow sharedInstance].superPlayer = _playerView; // 设置小窗显示的播放器
+  [SuperPlayerWindow sharedInstance].superPlayer = _playerView; // 设置小窗显示的播放器
    [SuperPlayerWindow sharedInstance].backController = self;  // 设置返回的view controller
    [[SuperPlayerWindow sharedInstance] show]; // 悬浮显示
 }
