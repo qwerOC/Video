@@ -103,6 +103,9 @@
         make.bottom.mas_equalTo(-140);
     }];
 }
+-(BOOL)prefersStatusBarHidden{
+    return NO;
+}
 -(void)clickVideo{
     HWNavViewController *video=[[HWNavViewController alloc] init];
     video.htmlStr=self.currtentUrl;
@@ -111,7 +114,7 @@
         dispatch_async(dispatch_get_main_queue(), ^{
         HostplayViewController *play=[[HostplayViewController alloc] init];
           play.url=urlStr;
-            [weakSelf presentViewController:play animated:YES completion:nil];
+            [weakSelf.navigationController pushViewController:play animated:YES];
         });
       
     };

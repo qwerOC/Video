@@ -73,5 +73,9 @@
 			</dict>
 		</dict>
 	</dict>
+	<key>NSPhotoLibraryAddUsageDescription</key>
+	<string>如果不允许,您将无法保存视频截图</string>
+	<key>NSPhotoLibraryUsageDescription</key>
+	<string>如果不允许,您将无法保存视频截图</string>
 </dict>
 </plist>

@@ -32,6 +32,7 @@
 #define MAS_SHORTHAND
 #define MAS_SHORTHAND_GLOBALS
 #import <Masonry.h>
+#import "HostUINavigationController+FDFullscreenPopGesture.h"
 
 #import "HostsTools.h"
 #pragma mark 国际化操作
