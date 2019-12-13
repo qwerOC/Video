@@ -135,11 +135,13 @@
     HostDBModel *model=self.dataArray[indexPath.row];
     cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
     cell.selectionStyle=UITableViewCellSelectionStyleNone;
-    cell.textLabel.text=model.name;
+    cell.textLabel.text=[NSString stringWithFormat:@"%@ 解析中",model.name];
     cell.detailTextLabel.text=model.url;
     
     if (self.playUrlArry.count>0&&[self.playUrlArry[indexPath.row] containsString:@"m3u8"]) {
         cell.textLabel.text=[NSString stringWithFormat:@"%@播放时长:%@",model.name,[HostsTools getVideoTimeByUrlString:self.playUrlArry[indexPath.row]]];
+    }else if (self.playUrlArry.count>0&&![self.playUrlArry[indexPath.row] containsString:@"m3u8"]){
+        cell.textLabel.text=[NSString stringWithFormat:@"%@解析失败",model.name];
     }
     return cell;
 }
