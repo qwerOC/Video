@@ -60,7 +60,6 @@
     config.allowsPictureInPictureMediaPlayback       = NO;
     //设置请求的User-Agent信息中应用程序名称 iOS9后可用
     config.applicationNameForUserAgent               = @"1111";
-    
     _webView = [[WKWebView alloc] initWithFrame:CGRectMake(0,0, self.view.frame.size.width, MuScreen_Height-SafeAreaTopHeight)
                                   configuration:config];
     // UI代理

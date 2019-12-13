@@ -65,8 +65,10 @@
         [self.playArry addObject:[NSString stringWithFormat:@"%@%@",model.url,self.htmlUrl]];
     }
     __weak typeof(self) weakSelf = self;
+    self.navigationItem.title=@"视频地址解析中...";
     [HostConcurrentManager uploadSortWithImageArry:self.playArry success:^(NSArray * _Nonnull urlarry) {
         weakSelf.playUrlArry=[NSMutableArray array];
+         self.navigationItem.title=@"解析完成";
         for (int i=0; i<urlarry.count; i++) {
             if ([urlarry[i] containsString:@"http"]&&[urlarry[i] containsString:@"m3u8"]) {
                 NSArray *arry = [urlarry[i] componentsSeparatedByString:@"="];
@@ -88,6 +90,7 @@
             }
         }
         dispatch_async(dispatch_get_main_queue(), ^{
+            weakSelf.navigationItem.title=@"解析完成";
             [weakSelf.analysisTale reloadData];
         });
     } error:^{
