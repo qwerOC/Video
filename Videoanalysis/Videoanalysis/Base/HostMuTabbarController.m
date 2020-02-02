@@ -23,23 +23,6 @@
     [self setUpAllChildVc];
     
 }
-#pragma mark  ----three
--(void)threeclick:(NSNotification*)sender{
-    switch ([sender.object longValue]) {
-        case 1:
-            
-            break;
-        case 2:
-            
-            break;
-        case 3:
-            
-            break;
-        default:
-            break;
-    }
-}
-
 
 #pragma mark ---Tabbar子控制器
 - (void)setUpAllChildVc {

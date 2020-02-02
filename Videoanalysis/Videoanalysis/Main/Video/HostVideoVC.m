@@ -35,7 +35,7 @@
     UIImageView *imgV=[[UIImageView alloc] init];
     imgV.backgroundColor=[UIColor whiteColor];
     _listTable.backgroundView=imgV;
-    _listTable.separatorStyle=UITableViewCellSeparatorStyleNone;
+//    _listTable.separatorStyle=UITableViewCellSepa ratorStyleNone;
     [_listTable registerNib:[UINib nibWithNibName:@"HostVideoCell" bundle:nil] forCellReuseIdentifier:@"HostVideoCell"];
     [self.view addSubview:_listTable];
     
@@ -65,10 +65,20 @@
 }
 
 - (nonnull UITableViewCell *)tableView:(nonnull UITableView *)tableView cellForRowAtIndexPath:(nonnull NSIndexPath *)indexPath {
-    HostVideoCell *cell=[tableView dequeueReusableCellWithIdentifier:@"HostVideoCell" forIndexPath:indexPath];
+//    HostVideoCell *cell=[tableView dequeueReusableCellWithIdentifier:@"HostVideoCell" forIndexPath:indexPath];
+//    cell.titleLab.text= model.name;
+//    cell.detailLab.text= model.url;
+    static NSString *cellInderfiner=@"cellInderfiner";
+        UITableViewCell *cell=[tableView dequeueReusableCellWithIdentifier:cellInderfiner];
+        if (!cell) {
+            cell=[[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:cellInderfiner];
+        }
     HostDBModel *model=self.dataArray[indexPath.section];
-    cell.titleLab.text= model.name;
-    cell.detailLab.text= model.url;
+
+        cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
+        cell.selectionStyle=UITableViewCellSelectionStyleNone;
+        cell.textLabel.text=model.name;
+    cell.detailTextLabel.text=model.url;
     return cell;
 }
 -(NSInteger)numberOfSectionsInTableView:(UITableView *)tableView{

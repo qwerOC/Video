@@ -19,7 +19,7 @@
 @implementation UIFont (QMUI)
 
 + (UIFont *)qmui_lightSystemFontOfSize:(CGFloat)fontSize {
-    return [UIFont fontWithName:@".SFUIText-Light" size:fontSize];
+    return [UIFont systemFontOfSize:fontSize];
 }
 
 + (UIFont *)qmui_systemFontOfSize:(CGFloat)size weight:(QMUIFontWeight)weight italic:(BOOL)italic {
